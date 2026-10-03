@@ -1,0 +1,4483 @@
+{
+  "Variants": [
+    {
+      "name": "Base",
+      "index": "0"
+    },
+    {
+      "name": "Gold",
+      "index": "1"
+    },
+    {
+      "name": "Diamond",
+      "index": "2"
+    },
+    {
+      "name": "Rainbow",
+      "index": "3"
+    },
+    {
+      "name": "Beskar",
+      "index": "4"
+    },
+    {
+      "name": "Galactic",
+      "index": "5"
+    },
+    {
+      "name": "Stellar",
+      "index": "6"
+    },
+    {
+      "name": "Kyber",
+      "index": "7"
+    }
+  ],
+  "Paths": [
+    {
+      "Path number": "1",
+      "bots_per_rebirth": [
+        {
+          "Rebirth": "0 > 1",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "CB"
+            },
+            {
+              "variant": "Base",
+              "type": "Pit"
+            },
+            {
+              "variant": "Base",
+              "type": "DRK-1 Probe"
+            }
+          ]
+        },
+        {
+          "Rebirth": "1 > 2",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "BDX Explorer"
+            },
+            {
+              "variant": "Base",
+              "type": "2BB"
+            },
+            {
+              "variant": "Base",
+              "type": "BAL-Core"
+            }
+          ]
+        },
+        {
+          "Rebirth": "2 > 3",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "A-LT"
+            },
+            {
+              "variant": "Base",
+              "type": "B-U4D"
+            },
+            {
+              "variant": "Gold",
+              "type": "R9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "3 > 4",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "ARG"
+            },
+            {
+              "variant": "Gold",
+              "type": "B1 Security"
+            },
+            {
+              "variant": "Base",
+              "type": "Groundmech"
+            }
+          ]
+        },
+        {
+          "Rebirth": "4 > 5",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B-U4D"
+            },
+            {
+              "variant": "Gold",
+              "type": "HOV-R"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "5 > 6",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "A-LT"
+            },
+            {
+              "variant": "Diamond",
+              "type": "ARG"
+            },
+            {
+              "variant": "Gold",
+              "type": "Groundmech"
+            }
+          ]
+        },
+        {
+          "Rebirth": "6 > 7",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "B-U4D"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B1 Security"
+            },
+            {
+              "variant": "Gold",
+              "type": "BB"
+            }
+          ]
+        },
+        {
+          "Rebirth": "7 > 8",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "HOV-R"
+            },
+            {
+              "variant": "Gold",
+              "type": "L0"
+            },
+            {
+              "variant": "Gold",
+              "type": "Util-Tec"
+            }
+          ]
+        },
+        {
+          "Rebirth": "8 > 9",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Gold",
+              "type": "R6"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Groundmech"
+            }
+          ]
+        },
+        {
+          "Rebirth": "9 > 10",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Haul-R"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "L0"
+            }
+          ]
+        },
+        {
+          "Rebirth": "10 > 11",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B1 Heavy"
+            },
+            {
+              "variant": "Base",
+              "type": "BB9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "11 > 12",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Base",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Base",
+              "type": "Mono-WLKR"
+            }
+          ]
+        },
+        {
+          "Rebirth": "12 > 13",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "R7"
+            },
+            {
+              "variant": "Base",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Base",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "13 > 14",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "14 > 15",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Gold",
+              "type": "BB9"
+            },
+            {
+              "variant": "Gold",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "15 > 16",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "16 > 17",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "17 > 18",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "BB9"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R7"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Mono-WLKR"
+            }
+          ]
+        },
+        {
+          "Rebirth": "18 > 19",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "19 > 20",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "R7"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "20 > 21",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "BB"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Orb-Walker"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Groundmech"
+            }
+          ]
+        },
+        {
+          "Rebirth": "21 > 22",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B1 Heavy"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "22 > 23",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Beskar",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "23 > 24",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "BB9"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Base",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "24 > 25",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Base",
+              "type": "IG"
+            },
+            {
+              "variant": "Gold",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "25 > 26",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Cyclens"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Loadlifter"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "RIC-1200"
+            }
+          ]
+        },
+        {
+          "Rebirth": "26 > 27",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "KX"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "TRI-TEK"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "27 > 28",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "MO-Trak"
+            },
+            {
+              "variant": "Beskar",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "28 > 29",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Beskar",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "29 > 30",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclens"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Loadlifter"
+            }
+          ]
+        },
+        {
+          "Rebirth": "30 > 31",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Sen-Tri"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Beskar",
+              "type": "KX"
+            }
+          ]
+        },
+        {
+          "Rebirth": "31 > 32",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Orb-Walker"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Opti-Pod"
+            },
+            {
+              "variant": "Beskar",
+              "type": "RIC"
+            }
+          ]
+        },
+        {
+          "Rebirth": "32 > 33",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "B1 Heavy"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Galactic",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "33 > 34",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Stellar",
+              "type": "BB"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Cyclens"
+            }
+          ]
+        },
+        {
+          "Rebirth": "34 > 35",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "BB9"
+            },
+            {
+              "variant": "Stellar",
+              "type": "IG"
+            },
+            {
+              "variant": "Stellar",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "35 > 36",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "BDX Explorer"
+            },
+            {
+              "variant": "Kyber",
+              "type": "2BB"
+            },
+            {
+              "variant": "Kyber",
+              "type": "A-LT"
+            }
+          ]
+        },
+        {
+          "Rebirth": "36 > 37",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "B1 Heavy"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Kyber",
+              "type": "BB"
+            }
+          ]
+        },
+        {
+          "Rebirth": "37 > 38",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "R2"
+            },
+            {
+              "variant": "Kyber",
+              "type": "R5"
+            },
+            {
+              "variant": "Kyber",
+              "type": "BB9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "38 > 39",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "R7"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Kyber",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "39 > 40",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Snow Mouse"
+            },
+            {
+              "variant": "Kyber",
+              "type": "DRFT-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Cyclens"
+            }
+          ]
+        }
+      ],
+      "max_bot_variant_needed": [
+        {
+          "variant": "Base",
+          "type": "CB"
+        },
+        {
+          "variant": "Base",
+          "type": "Pit"
+        },
+        {
+          "variant": "Base",
+          "type": "DRK-1 Probe"
+        },
+        {
+          "variant": "Base",
+          "type": "BAL-Core"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R9"
+        },
+        {
+          "variant": "Diamond",
+          "type": "ARG"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B-U4D"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B1 Security"
+        },
+        {
+          "variant": "Diamond",
+          "type": "HOV-R"
+        },
+        {
+          "variant": "Gold",
+          "type": "Util-Tec"
+        },
+        {
+          "variant": "Gold",
+          "type": "Trak-R"
+        },
+        {
+          "variant": "Gold",
+          "type": "Strike-Orb"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Haul-R"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "L0"
+        },
+        {
+          "variant": "Beskar",
+          "type": "AMP Walker"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Opti-STRK"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "RIC-1200"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "TRI-TEK"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "MO-Trak"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Mono-WLKR"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Mecha-Droid"
+        },
+        {
+          "variant": "Galactic",
+          "type": "B2-RP"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Loadlifter"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Sen-Tri"
+        },
+        {
+          "variant": "Beskar",
+          "type": "KX"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Orb-Walker"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Opti-Pod"
+        },
+        {
+          "variant": "Beskar",
+          "type": "RIC"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Cyclo-Grav"
+        },
+        {
+          "variant": "Kyber",
+          "type": "BDX Explorer"
+        },
+        {
+          "variant": "Kyber",
+          "type": "2BB"
+        },
+        {
+          "variant": "Kyber",
+          "type": "A-LT"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B1 Heavy"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Groundmech"
+        },
+        {
+          "variant": "Kyber",
+          "type": "BB"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R2"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R5"
+        },
+        {
+          "variant": "Kyber",
+          "type": "BB9"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R7"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Proto-Roller"
+        },
+        {
+          "variant": "Kyber",
+          "type": "IG"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Snow Mouse"
+        },
+        {
+          "variant": "Kyber",
+          "type": "DRFT-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Cyclens"
+        }
+      ]
+    },
+    {
+      "Path number": "2",
+      "bots_per_rebirth": [
+        {
+          "Rebirth": "0 > 1",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "ID10"
+            },
+            {
+              "variant": "Base",
+              "type": "Mouse"
+            },
+            {
+              "variant": "Base",
+              "type": "Gonk"
+            }
+          ]
+        },
+        {
+          "Rebirth": "1 > 2",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "ROLL-R"
+            },
+            {
+              "variant": "Base",
+              "type": "Senate Hovercam"
+            },
+            {
+              "variant": "Base",
+              "type": "NAV-EX"
+            }
+          ]
+        },
+        {
+          "Rebirth": "2 > 3",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "R4"
+            },
+            {
+              "variant": "Base",
+              "type": "Vect-Arm"
+            },
+            {
+              "variant": "Gold",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "3 > 4",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "2BB"
+            },
+            {
+              "variant": "Gold",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Base",
+              "type": "Orb-Walker"
+            }
+          ]
+        },
+        {
+          "Rebirth": "4 > 5",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "R4"
+            },
+            {
+              "variant": "Gold",
+              "type": "Vect-Arm"
+            },
+            {
+              "variant": "Gold",
+              "type": "NAV-EX"
+            }
+          ]
+        },
+        {
+          "Rebirth": "5 > 6",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "Gunrunner"
+            },
+            {
+              "variant": "Diamond",
+              "type": "2BB"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BAL-Core"
+            }
+          ]
+        },
+        {
+          "Rebirth": "6 > 7",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "ROLL-R"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BDX Explorer"
+            },
+            {
+              "variant": "Gold",
+              "type": "R2"
+            }
+          ]
+        },
+        {
+          "Rebirth": "7 > 8",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "R4"
+            },
+            {
+              "variant": "Gold",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Gold",
+              "type": "Gunrunner"
+            }
+          ]
+        },
+        {
+          "Rebirth": "8 > 9",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "NAV-EX"
+            },
+            {
+              "variant": "Gold",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Gold",
+              "type": "AMP Walker"
+            }
+          ]
+        },
+        {
+          "Rebirth": "9 > 10",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Vect-Arm"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R2"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B2 Super"
+            }
+          ]
+        },
+        {
+          "Rebirth": "10 > 11",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B2 Heavy"
+            }
+          ]
+        },
+        {
+          "Rebirth": "11 > 12",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Orb-Walker"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R2"
+            },
+            {
+              "variant": "Base",
+              "type": "BB9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "12 > 13",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Base",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "13 > 14",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Base",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Gold",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "14 > 15",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Gold",
+              "type": "BB9"
+            },
+            {
+              "variant": "Gold",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "15 > 16",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "16 > 17",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Opti-Pod"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "17 > 18",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Util-Tec"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BB9"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "18 > 19",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R7"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "19 > 20",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Cyclo-Grav"
+            }
+          ]
+        },
+        {
+          "Rebirth": "20 > 21",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "L0"
+            },
+            {
+              "variant": "Beskar",
+              "type": "R6"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Haul-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "21 > 22",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Sen-Tri"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "22 > 23",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "BB9"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "23 > 24",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Base",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "24 > 25",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Gold",
+              "type": "TRI-TEK"
+            },
+            {
+              "variant": "Base",
+              "type": "RIC-1200"
+            }
+          ]
+        },
+        {
+          "Rebirth": "25 > 26",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "KX"
+            },
+            {
+              "variant": "Diamond",
+              "type": "DRFT-R"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "26 > 27",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "LEP"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Loadlifter"
+            },
+            {
+              "variant": "Beskar",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "27 > 28",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Snow Mouse"
+            },
+            {
+              "variant": "Beskar",
+              "type": "TRI-TEK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "28 > 29",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Galactic",
+              "type": "R7"
+            },
+            {
+              "variant": "Beskar",
+              "type": "RIC"
+            }
+          ]
+        },
+        {
+          "Rebirth": "29 > 30",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Beskar",
+              "type": "KX"
+            },
+            {
+              "variant": "Galactic",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "30 > 31",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Loadlifter"
+            }
+          ]
+        },
+        {
+          "Rebirth": "31 > 32",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Gunrunner"
+            },
+            {
+              "variant": "Galactic",
+              "type": "B1 Heavy"
+            },
+            {
+              "variant": "Beskar",
+              "type": "LEP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "32 > 33",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "R2"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Galactic",
+              "type": "KX"
+            }
+          ]
+        },
+        {
+          "Rebirth": "33 > 34",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "R6"
+            },
+            {
+              "variant": "Stellar",
+              "type": "L0"
+            },
+            {
+              "variant": "Galactic",
+              "type": "RIC"
+            }
+          ]
+        },
+        {
+          "Rebirth": "34 > 35",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "R7"
+            },
+            {
+              "variant": "Stellar",
+              "type": "DRFT-R"
+            },
+            {
+              "variant": "Stellar",
+              "type": "Cyclens"
+            }
+          ]
+        },
+        {
+          "Rebirth": "35 > 36",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "B1 Security"
+            },
+            {
+              "variant": "Kyber",
+              "type": "R4"
+            },
+            {
+              "variant": "Kyber",
+              "type": "R9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "36 > 37",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "L0"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Orb-Walker"
+            }
+          ]
+        },
+        {
+          "Rebirth": "37 > 38",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Kyber",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Kyber",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "38 > 39",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Kyber",
+              "type": "KX"
+            }
+          ]
+        },
+        {
+          "Rebirth": "39 > 40",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "RIC"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Loadlifter"
+            },
+            {
+              "variant": "Kyber",
+              "type": "LEP"
+            }
+          ]
+        }
+      ],
+      "max_bot_variant_needed": [
+        {
+          "variant": "Base",
+          "type": "ID10"
+        },
+        {
+          "variant": "Base",
+          "type": "Mouse"
+        },
+        {
+          "variant": "Base",
+          "type": "Gonk"
+        },
+        {
+          "variant": "Base",
+          "type": "Senate Hovercam"
+        },
+        {
+          "variant": "Diamond",
+          "type": "2BB"
+        },
+        {
+          "variant": "Diamond",
+          "type": "ROLL-R"
+        },
+        {
+          "variant": "Diamond",
+          "type": "BDX Explorer"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "NAV-EX"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Vect-Arm"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "BAL-Core"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "AMP Walker"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Opti-Pod"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Util-Tec"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Haul-R"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Sen-Tri"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Strike-Orb"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Proto-Roller"
+        },
+        {
+          "variant": "Beskar",
+          "type": "BB9"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Mono-WLKR"
+        },
+        {
+          "variant": "Base",
+          "type": "RIC-1200"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "IG"
+        },
+        {
+          "variant": "Beskar",
+          "type": "MO-Trak"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Snow Mouse"
+        },
+        {
+          "variant": "Beskar",
+          "type": "TRI-TEK"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Gunrunner"
+        },
+        {
+          "variant": "Galactic",
+          "type": "B1 Heavy"
+        },
+        {
+          "variant": "Stellar",
+          "type": "R2"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Opti-STRK"
+        },
+        {
+          "variant": "Stellar",
+          "type": "R6"
+        },
+        {
+          "variant": "Stellar",
+          "type": "R7"
+        },
+        {
+          "variant": "Stellar",
+          "type": "DRFT-R"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Cyclens"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B1 Security"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R4"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R9"
+        },
+        {
+          "variant": "Kyber",
+          "type": "L0"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Trak-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Orb-Walker"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B2 Super"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B2 Heavy"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B2-RP"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Mecha-Droid"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Cyclo-Grav"
+        },
+        {
+          "variant": "Kyber",
+          "type": "KX"
+        },
+        {
+          "variant": "Kyber",
+          "type": "RIC"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Loadlifter"
+        },
+        {
+          "variant": "Kyber",
+          "type": "LEP"
+        }
+      ]
+    },
+    {
+      "Path number": "3",
+      "bots_per_rebirth": [
+        {
+          "Rebirth": "0 > 1",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "Mouse"
+            },
+            {
+              "variant": "Base",
+              "type": "Pit"
+            },
+            {
+              "variant": "Base",
+              "type": "Gonk"
+            }
+          ]
+        },
+        {
+          "Rebirth": "1 > 2",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "R3"
+            },
+            {
+              "variant": "Base",
+              "type": "2BB"
+            },
+            {
+              "variant": "Base",
+              "type": "Senate Hovercam"
+            }
+          ]
+        },
+        {
+          "Rebirth": "2 > 3",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "R8"
+            },
+            {
+              "variant": "Base",
+              "type": "R5"
+            },
+            {
+              "variant": "Base",
+              "type": "R4"
+            }
+          ]
+        },
+        {
+          "Rebirth": "3 > 4",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B1 Battle"
+            },
+            {
+              "variant": "Gold",
+              "type": "R9"
+            },
+            {
+              "variant": "Gold",
+              "type": "B1 Security"
+            }
+          ]
+        },
+        {
+          "Rebirth": "4 > 5",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "R3"
+            },
+            {
+              "variant": "Gold",
+              "type": "2BB"
+            },
+            {
+              "variant": "Gold",
+              "type": "Senate Hovercam"
+            }
+          ]
+        },
+        {
+          "Rebirth": "5 > 6",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "R5"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R4"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "6 > 7",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "R8"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B1 Battle"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "7 > 8",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "R3"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "2BB"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B1 Security"
+            }
+          ]
+        },
+        {
+          "Rebirth": "8 > 9",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "R5"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R4"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "9 > 10",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Senate Hovercam"
+            },
+            {
+              "variant": "Base",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Base",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "10 > 11",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Base",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "Util-Tec"
+            }
+          ]
+        },
+        {
+          "Rebirth": "11 > 12",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Gold",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Gold",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "12 > 13",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Base",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "13 > 14",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Base",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Gold",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "14 > 15",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Gold",
+              "type": "BB9"
+            },
+            {
+              "variant": "Gold",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "15 > 16",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "16 > 17",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Opti-Pod"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "17 > 18",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Util-Tec"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BB9"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "18 > 19",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R7"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "19 > 20",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Cyclo-Grav"
+            }
+          ]
+        },
+        {
+          "Rebirth": "20 > 21",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Opti-Pod"
+            },
+            {
+              "variant": "Beskar",
+              "type": "R2"
+            }
+          ]
+        },
+        {
+          "Rebirth": "21 > 22",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Gunrunner"
+            },
+            {
+              "variant": "Beskar",
+              "type": "LNG-Shot"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "22 > 23",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "23 > 24",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "BB9"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Base",
+              "type": "RIC"
+            }
+          ]
+        },
+        {
+          "Rebirth": "24 > 25",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Base",
+              "type": "Loadlifter"
+            },
+            {
+              "variant": "Gold",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "25 > 26",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "LEP"
+            },
+            {
+              "variant": "Diamond",
+              "type": "TRI-TEK"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "26 > 27",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "RIC-1200"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "IG"
+            },
+            {
+              "variant": "Beskar",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "27 > 28",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "BB9"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "RIC"
+            },
+            {
+              "variant": "Beskar",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "28 > 29",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Beskar",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "29 > 30",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "R7"
+            },
+            {
+              "variant": "Beskar",
+              "type": "LEP"
+            },
+            {
+              "variant": "Galactic",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "30 > 31",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Beskar",
+              "type": "RIC-1200"
+            }
+          ]
+        },
+        {
+          "Rebirth": "31 > 32",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Galactic",
+              "type": "BB"
+            },
+            {
+              "variant": "Beskar",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "32 > 33",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Loadlifter"
+            }
+          ]
+        },
+        {
+          "Rebirth": "33 > 34",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Orb-Walker"
+            },
+            {
+              "variant": "Stellar",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Galactic",
+              "type": "LEP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "34 > 35",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Stellar",
+              "type": "KX"
+            },
+            {
+              "variant": "Stellar",
+              "type": "RIC"
+            }
+          ]
+        },
+        {
+          "Rebirth": "35 > 36",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "ARG"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Senate Hovercam"
+            },
+            {
+              "variant": "Kyber",
+              "type": "B-U4D"
+            }
+          ]
+        },
+        {
+          "Rebirth": "36 > 37",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Kyber",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Util-Tec"
+            }
+          ]
+        },
+        {
+          "Rebirth": "37 > 38",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Haul-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "LNG-Shot"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Opti-STRK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "38 > 39",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Kyber",
+              "type": "BB9"
+            },
+            {
+              "variant": "Kyber",
+              "type": "RIC-1200"
+            }
+          ]
+        },
+        {
+          "Rebirth": "39 > 40",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "MO-Trak"
+            },
+            {
+              "variant": "Kyber",
+              "type": "TRI-TEK"
+            },
+            {
+              "variant": "Kyber",
+              "type": "IG"
+            }
+          ]
+        }
+      ],
+      "max_bot_variant_needed": [
+        {
+          "variant": "Base",
+          "type": "Mouse"
+        },
+        {
+          "variant": "Base",
+          "type": "Pit"
+        },
+        {
+          "variant": "Base",
+          "type": "Gonk"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R8"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B1 Battle"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R9"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "R3"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "2BB"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "B1 Security"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "R5"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "R4"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "BDX Explorer"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "BAL-Core"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Opti-Pod"
+        },
+        {
+          "variant": "Beskar",
+          "type": "R2"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Gunrunner"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Cyclo-Grav"
+        },
+        {
+          "variant": "Beskar",
+          "type": "B2-RP"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Snow Mouse"
+        },
+        {
+          "variant": "Galactic",
+          "type": "R7"
+        },
+        {
+          "variant": "Galactic",
+          "type": "DRFT-R"
+        },
+        {
+          "variant": "Stellar",
+          "type": "B2 Heavy"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Mecha-Droid"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Groundmech"
+        },
+        {
+          "variant": "Galactic",
+          "type": "BB"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Trak-R"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Loadlifter"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Orb-Walker"
+        },
+        {
+          "variant": "Stellar",
+          "type": "B2 Super"
+        },
+        {
+          "variant": "Galactic",
+          "type": "LEP"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Proto-Roller"
+        },
+        {
+          "variant": "Stellar",
+          "type": "KX"
+        },
+        {
+          "variant": "Stellar",
+          "type": "RIC"
+        },
+        {
+          "variant": "Kyber",
+          "type": "ARG"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Senate Hovercam"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B-U4D"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Strike-Orb"
+        },
+        {
+          "variant": "Kyber",
+          "type": "AMP Walker"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Util-Tec"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Haul-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "LNG-Shot"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Opti-STRK"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Mono-WLKR"
+        },
+        {
+          "variant": "Kyber",
+          "type": "BB9"
+        },
+        {
+          "variant": "Kyber",
+          "type": "RIC-1200"
+        },
+        {
+          "variant": "Kyber",
+          "type": "MO-Trak"
+        },
+        {
+          "variant": "Kyber",
+          "type": "TRI-TEK"
+        },
+        {
+          "variant": "Kyber",
+          "type": "IG"
+        }
+      ]
+    },
+    {
+      "Path number": "4",
+      "bots_per_rebirth": [
+        {
+          "Rebirth": "0 > 1",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "ID10"
+            },
+            {
+              "variant": "Base",
+              "type": "Pit"
+            },
+            {
+              "variant": "Base",
+              "type": "DRK-1 Probe"
+            }
+          ]
+        },
+        {
+          "Rebirth": "1 > 2",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "R3"
+            },
+            {
+              "variant": "Base",
+              "type": "2BB"
+            },
+            {
+              "variant": "Base",
+              "type": "Senate Hovercam"
+            }
+          ]
+        },
+        {
+          "Rebirth": "2 > 3",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "R5"
+            },
+            {
+              "variant": "Gold",
+              "type": "R8"
+            },
+            {
+              "variant": "Base",
+              "type": "R4"
+            }
+          ]
+        },
+        {
+          "Rebirth": "3 > 4",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B1 Battle"
+            },
+            {
+              "variant": "Gold",
+              "type": "R9"
+            },
+            {
+              "variant": "Gold",
+              "type": "B1 Security"
+            }
+          ]
+        },
+        {
+          "Rebirth": "4 > 5",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "R3"
+            },
+            {
+              "variant": "Gold",
+              "type": "2BB"
+            },
+            {
+              "variant": "Gold",
+              "type": "Senate Hovercam"
+            }
+          ]
+        },
+        {
+          "Rebirth": "5 > 6",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "R5"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R4"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "6 > 7",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "R8"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B1 Battle"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "7 > 8",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "R3"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B1 Security"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "2BB"
+            }
+          ]
+        },
+        {
+          "Rebirth": "8 > 9",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "R5"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R4"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "9 > 10",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Senate Hovercam"
+            },
+            {
+              "variant": "Base",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Base",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "10 > 11",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Base",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "Util-Tec"
+            }
+          ]
+        },
+        {
+          "Rebirth": "11 > 12",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Gold",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Gold",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "12 > 13",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Base",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "13 > 14",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "14 > 15",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "15 > 16",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Util-Tec"
+            },
+            {
+              "variant": "Base",
+              "type": "BB9"
+            },
+            {
+              "variant": "Gold",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "16 > 17",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Gold",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "17 > 18",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Gold",
+              "type": "BB9"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "18 > 19",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R7"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "19 > 20",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Cyclo-Grav"
+            }
+          ]
+        },
+        {
+          "Rebirth": "20 > 21",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Haul-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "21 > 22",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Gunrunner"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2 Super"
+            }
+          ]
+        },
+        {
+          "Rebirth": "22 > 23",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "23 > 24",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Base",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "24 > 25",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Base",
+              "type": "TRI-TEK"
+            },
+            {
+              "variant": "Gold",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "25 > 26",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Cyclens"
+            },
+            {
+              "variant": "Diamond",
+              "type": "LEP"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "26 > 27",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "RIC-1200"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Snow Mouse"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Loadlifter"
+            }
+          ]
+        },
+        {
+          "Rebirth": "27 > 28",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "IG"
+            },
+            {
+              "variant": "Beskar",
+              "type": "KX"
+            }
+          ]
+        },
+        {
+          "Rebirth": "28 > 29",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "BB9"
+            },
+            {
+              "variant": "Galactic",
+              "type": "R7"
+            },
+            {
+              "variant": "Beskar",
+              "type": "TRI-TEK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "29 > 30",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclens"
+            },
+            {
+              "variant": "Galactic",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "30 > 31",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Beskar",
+              "type": "TRI-TEK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "31 > 32",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "R2"
+            },
+            {
+              "variant": "Galactic",
+              "type": "R6"
+            },
+            {
+              "variant": "Beskar",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "32 > 33",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Galactic",
+              "type": "BB9"
+            },
+            {
+              "variant": "Galactic",
+              "type": "RIC-1200"
+            }
+          ]
+        },
+        {
+          "Rebirth": "33 > 34",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Stellar",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Galactic",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "34 > 35",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Stellar",
+              "type": "Loadlifter"
+            },
+            {
+              "variant": "Stellar",
+              "type": "LEP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "35 > 36",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "NAV-EX"
+            },
+            {
+              "variant": "Kyber",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Vect-Arm"
+            }
+          ]
+        },
+        {
+          "Rebirth": "36 > 37",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Sen-Tri"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Opti-Pod"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Gunrunner"
+            }
+          ]
+        },
+        {
+          "Rebirth": "37 > 38",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "B1 Heavy"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Kyber",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "38 > 39",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Proto-Roller"
+            },
+            {
+              "variant": "Kyber",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "39 > 40",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "DRFT-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Cyclens"
+            },
+            {
+              "variant": "Kyber",
+              "type": "KX"
+            }
+          ]
+        }
+      ],
+      "max_bot_variant_needed": [
+        {
+          "variant": "Base",
+          "type": "ID10"
+        },
+        {
+          "variant": "Base",
+          "type": "Pit"
+        },
+        {
+          "variant": "Base",
+          "type": "DRK-1 Probe"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R8"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B1 Battle"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R9"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "R3"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "B1 Security"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "2BB"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "R5"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "R4"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "BDX Explorer"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Senate Hovercam"
+        },
+        {
+          "variant": "Diamond",
+          "type": "BAL-Core"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "Util-Tec"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Haul-R"
+        },
+        {
+          "variant": "Beskar",
+          "type": "B2 Super"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Mecha-Droid"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Opti-STRK"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Mono-WLKR"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Trak-R"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Cyclo-Grav"
+        },
+        {
+          "variant": "Beskar",
+          "type": "TRI-TEK"
+        },
+        {
+          "variant": "Galactic",
+          "type": "R2"
+        },
+        {
+          "variant": "Galactic",
+          "type": "R6"
+        },
+        {
+          "variant": "Beskar",
+          "type": "IG"
+        },
+        {
+          "variant": "Stellar",
+          "type": "B2 Heavy"
+        },
+        {
+          "variant": "Galactic",
+          "type": "BB9"
+        },
+        {
+          "variant": "Galactic",
+          "type": "RIC-1200"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Strike-Orb"
+        },
+        {
+          "variant": "Stellar",
+          "type": "AMP Walker"
+        },
+        {
+          "variant": "Galactic",
+          "type": "MO-Trak"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Loadlifter"
+        },
+        {
+          "variant": "Stellar",
+          "type": "LEP"
+        },
+        {
+          "variant": "Kyber",
+          "type": "NAV-EX"
+        },
+        {
+          "variant": "Kyber",
+          "type": "BAL-Core"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Vect-Arm"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Sen-Tri"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Opti-Pod"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Gunrunner"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B1 Heavy"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Groundmech"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R7"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Proto-Roller"
+        },
+        {
+          "variant": "Kyber",
+          "type": "B2-RP"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Snow Mouse"
+        },
+        {
+          "variant": "Kyber",
+          "type": "DRFT-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Cyclens"
+        },
+        {
+          "variant": "Kyber",
+          "type": "KX"
+        }
+      ]
+    },
+    {
+      "Path number": "5",
+      "bots_per_rebirth": [
+        {
+          "Rebirth": "0 > 1",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "ID10"
+            },
+            {
+              "variant": "Base",
+              "type": "Mouse"
+            },
+            {
+              "variant": "Base",
+              "type": "Gonk"
+            }
+          ]
+        },
+        {
+          "Rebirth": "1 > 2",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "2BB"
+            },
+            {
+              "variant": "Gold",
+              "type": "Imperial Probe"
+            },
+            {
+              "variant": "Base",
+              "type": "ROLL-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "2 > 3",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "R4"
+            },
+            {
+              "variant": "Base",
+              "type": "Vect-Arm"
+            },
+            {
+              "variant": "Gold",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "3 > 4",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "R9"
+            },
+            {
+              "variant": "Gold",
+              "type": "B1 Battle"
+            },
+            {
+              "variant": "Gold",
+              "type": "B1 Security"
+            }
+          ]
+        },
+        {
+          "Rebirth": "4 > 5",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Gold",
+              "type": "R4"
+            },
+            {
+              "variant": "Gold",
+              "type": "R3"
+            }
+          ]
+        },
+        {
+          "Rebirth": "5 > 6",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "Gunrunner"
+            },
+            {
+              "variant": "Diamond",
+              "type": "2BB"
+            },
+            {
+              "variant": "Diamond",
+              "type": "BDX Explorer"
+            }
+          ]
+        },
+        {
+          "Rebirth": "6 > 7",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "ROLL-R"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R5"
+            },
+            {
+              "variant": "Gold",
+              "type": "R2"
+            }
+          ]
+        },
+        {
+          "Rebirth": "7 > 8",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R8"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B1 Battle"
+            }
+          ]
+        },
+        {
+          "Rebirth": "8 > 9",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "NAV-EX"
+            },
+            {
+              "variant": "Gold",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Gold",
+              "type": "AMP Walker"
+            }
+          ]
+        },
+        {
+          "Rebirth": "9 > 10",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Imperial Probe"
+            },
+            {
+              "variant": "Base",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Base",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "10 > 11",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Base",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "Util-Tec"
+            }
+          ]
+        },
+        {
+          "Rebirth": "11 > 12",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "BAL-Core"
+            },
+            {
+              "variant": "Gold",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Gold",
+              "type": "Trak-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "12 > 13",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Gold",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R2"
+            }
+          ]
+        },
+        {
+          "Rebirth": "13 > 14",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "Groundmech"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Util-Tec"
+            }
+          ]
+        },
+        {
+          "Rebirth": "14 > 15",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "B2 Heavy"
+            },
+            {
+              "variant": "Diamond",
+              "type": "B2 Super"
+            },
+            {
+              "variant": "Base",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "15 > 16",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "BB9"
+            },
+            {
+              "variant": "Gold",
+              "type": "R7"
+            },
+            {
+              "variant": "Gold",
+              "type": "Proto-Roller"
+            }
+          ]
+        },
+        {
+          "Rebirth": "16 > 17",
+          "bots": [
+            {
+              "variant": "Base",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Gold",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Gold",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "17 > 18",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "BB9"
+            },
+            {
+              "variant": "Gold",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Diamond",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "18 > 19",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Diamond",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "19 > 20",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "B2-RP"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "BB9"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "R7"
+            }
+          ]
+        },
+        {
+          "Rebirth": "20 > 21",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "L0"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Strike-Orb"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Haul-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "21 > 22",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Sen-Tri"
+            },
+            {
+              "variant": "Beskar",
+              "type": "R6"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Gunrunner"
+            }
+          ]
+        },
+        {
+          "Rebirth": "22 > 23",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "BB9"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Beskar",
+              "type": "B2-RP"
+            }
+          ]
+        },
+        {
+          "Rebirth": "23 > 24",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Mono-WLKR"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Base",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "24 > 25",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Base",
+              "type": "RIC"
+            },
+            {
+              "variant": "Gold",
+              "type": "TRI-TEK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "25 > 26",
+          "bots": [
+            {
+              "variant": "Gold",
+              "type": "Cyclens"
+            },
+            {
+              "variant": "Diamond",
+              "type": "LEP"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "26 > 27",
+          "bots": [
+            {
+              "variant": "Diamond",
+              "type": "RIC-1200"
+            },
+            {
+              "variant": "Rainbow",
+              "type": "IG"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Loadlifter"
+            }
+          ]
+        },
+        {
+          "Rebirth": "27 > 28",
+          "bots": [
+            {
+              "variant": "Rainbow",
+              "type": "RIC"
+            },
+            {
+              "variant": "Beskar",
+              "type": "MO-Trak"
+            },
+            {
+              "variant": "Galactic",
+              "type": "BB9"
+            }
+          ]
+        },
+        {
+          "Rebirth": "28 > 29",
+          "bots": [
+            {
+              "variant": "Beskar",
+              "type": "IG"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Opti-STRK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "29 > 30",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "R7"
+            },
+            {
+              "variant": "Beskar",
+              "type": "LEP"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Cyclens"
+            }
+          ]
+        },
+        {
+          "Rebirth": "30 > 31",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "AMP Walker"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Beskar",
+              "type": "Snow Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "31 > 32",
+          "bots": [
+            {
+              "variant": "Galactic",
+              "type": "L0"
+            },
+            {
+              "variant": "Galactic",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Beskar",
+              "type": "DRFT-R"
+            }
+          ]
+        },
+        {
+          "Rebirth": "32 > 33",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Util-Tec"
+            },
+            {
+              "variant": "Galactic",
+              "type": "R7"
+            },
+            {
+              "variant": "Galactic",
+              "type": "TRI-TEK"
+            }
+          ]
+        },
+        {
+          "Rebirth": "33 > 34",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Haul-R"
+            },
+            {
+              "variant": "Stellar",
+              "type": "LNG-Shot"
+            },
+            {
+              "variant": "Galactic",
+              "type": "IG"
+            }
+          ]
+        },
+        {
+          "Rebirth": "34 > 35",
+          "bots": [
+            {
+              "variant": "Stellar",
+              "type": "Mecha-Droid"
+            },
+            {
+              "variant": "Stellar",
+              "type": "RIC-1200"
+            },
+            {
+              "variant": "Stellar",
+              "type": "MO-Trak"
+            }
+          ]
+        },
+        {
+          "Rebirth": "35 > 36",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "ROLL-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "HOV-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Mouse"
+            }
+          ]
+        },
+        {
+          "Rebirth": "36 > 37",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "BB"
+            },
+            {
+              "variant": "Kyber",
+              "type": "R2"
+            },
+            {
+              "variant": "Kyber",
+              "type": "R6"
+            }
+          ]
+        },
+        {
+          "Rebirth": "37 > 38",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "L0"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Trak-R"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Mecha-Droid"
+            }
+          ]
+        },
+        {
+          "Rebirth": "38 > 39",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Cyclo-Grav"
+            },
+            {
+              "variant": "Kyber",
+              "type": "Opti-STRK"
+            },
+            {
+              "variant": "Kyber",
+              "type": "RIC"
+            }
+          ]
+        },
+        {
+          "Rebirth": "39 > 40",
+          "bots": [
+            {
+              "variant": "Kyber",
+              "type": "Loadlifter"
+            },
+            {
+              "variant": "Kyber",
+              "type": "LEP"
+            },
+            {
+              "variant": "Kyber",
+              "type": "RIC-1200"
+            }
+          ]
+        }
+      ],
+      "max_bot_variant_needed": [
+        {
+          "variant": "Base",
+          "type": "ID10"
+        },
+        {
+          "variant": "Base",
+          "type": "Gonk"
+        },
+        {
+          "variant": "Base",
+          "type": "Vect-Arm"
+        },
+        {
+          "variant": "Gold",
+          "type": "R9"
+        },
+        {
+          "variant": "Gold",
+          "type": "B1 Security"
+        },
+        {
+          "variant": "Gold",
+          "type": "R4"
+        },
+        {
+          "variant": "Gold",
+          "type": "R3"
+        },
+        {
+          "variant": "Diamond",
+          "type": "2BB"
+        },
+        {
+          "variant": "Diamond",
+          "type": "BDX Explorer"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R5"
+        },
+        {
+          "variant": "Diamond",
+          "type": "R8"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B1 Battle"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "NAV-EX"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Imperial Probe"
+        },
+        {
+          "variant": "Rainbow",
+          "type": "BAL-Core"
+        },
+        {
+          "variant": "Diamond",
+          "type": "Groundmech"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B2 Heavy"
+        },
+        {
+          "variant": "Diamond",
+          "type": "B2 Super"
+        },
+        {
+          "variant": "Gold",
+          "type": "Proto-Roller"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Strike-Orb"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Sen-Tri"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Gunrunner"
+        },
+        {
+          "variant": "Beskar",
+          "type": "B2-RP"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Mono-WLKR"
+        },
+        {
+          "variant": "Galactic",
+          "type": "BB9"
+        },
+        {
+          "variant": "Galactic",
+          "type": "Cyclens"
+        },
+        {
+          "variant": "Stellar",
+          "type": "AMP Walker"
+        },
+        {
+          "variant": "Beskar",
+          "type": "Snow Mouse"
+        },
+        {
+          "variant": "Beskar",
+          "type": "DRFT-R"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Util-Tec"
+        },
+        {
+          "variant": "Galactic",
+          "type": "R7"
+        },
+        {
+          "variant": "Galactic",
+          "type": "TRI-TEK"
+        },
+        {
+          "variant": "Stellar",
+          "type": "Haul-R"
+        },
+        {
+          "variant": "Stellar",
+          "type": "LNG-Shot"
+        },
+        {
+          "variant": "Galactic",
+          "type": "IG"
+        },
+        {
+          "variant": "Stellar",
+          "type": "MO-Trak"
+        },
+        {
+          "variant": "Kyber",
+          "type": "ROLL-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "HOV-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Mouse"
+        },
+        {
+          "variant": "Kyber",
+          "type": "BB"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R2"
+        },
+        {
+          "variant": "Kyber",
+          "type": "R6"
+        },
+        {
+          "variant": "Kyber",
+          "type": "L0"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Trak-R"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Mecha-Droid"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Cyclo-Grav"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Opti-STRK"
+        },
+        {
+          "variant": "Kyber",
+          "type": "RIC"
+        },
+        {
+          "variant": "Kyber",
+          "type": "Loadlifter"
+        },
+        {
+          "variant": "Kyber",
+          "type": "LEP"
+        },
+        {
+          "variant": "Kyber",
+          "type": "RIC-1200"
+        }
+      ]
+    }
+  ],
+  "AllBots": [
+    "CB",
+    "Pit",
+    "DRK-1 Probe",
+    "BDX Explorer",
+    "2BB",
+    "BAL-Core",
+    "A-LT",
+    "B-U4D",
+    "R9",
+    "ARG",
+    "B1 Security",
+    "Groundmech",
+    "HOV-R",
+    "L0",
+    "Util-Tec",
+    "Trak-R",
+    "R6",
+    "Strike-Orb",
+    "Haul-R",
+    "AMP Walker",
+    "B1 Heavy",
+    "Proto-Roller",
+    "Mono-WLKR",
+    "Opti-STRK",
+    "Mecha-Droid",
+    "Cyclo-Grav",
+    "B2-RP",
+    "ID10",
+    "Mouse",
+    "Gonk",
+    "ROLL-R",
+    "Senate Hovercam",
+    "NAV-EX",
+    "R4",
+    "Vect-Arm",
+    "Gunrunner",
+    "LNG-Shot",
+    "IG",
+    "Snow Mouse",
+    "Sen-Tri",
+    "Opti-Pod",
+    "DRFT-R",
+    "Cyclens",
+    "RIC-1200",
+    "MO-Trak",
+    "B2 Heavy",
+    "B2 Super",
+    "R8",
+    "Imperial Probe",
+    "Util-Tec",
+    "R7",
+    "BB9"
+  ]
+}
