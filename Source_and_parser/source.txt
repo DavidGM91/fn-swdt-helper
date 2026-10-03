@@ -1,0 +1,1471 @@
+== Droid and Credit Requirements ==
+
+Down here is a list of all droid and credit rebirth requirements for all 5 paths. Next to each droid you will notice a number. This number means that the droid is later required for another rebirth requirement.
+
+* ¹ = {{Variant|Gold}} variant is required for a later rebirth.
+* ² = {{Variant|Diamond}} variant is required for a later rebirth.
+* ³ = {{Variant|Rainbow}} variant is required for a later rebirth.
+* ⁴ = {{Variant|Beskar}} variant is required for a later rebirth.
+* ⁵ = {{Variant|Galactic}} variant is required for a later rebirth.
+* ⁶ = {{Variant|Stellar}} variant is required for a later rebirth.
+* ⁷ = Any {{Variant|Kyber}} variant is required for a later rebirth.
+* ⁻ = Same variant is required for a later rebirth.
+
+=== Path 1 ===
+<div class="mw-collapsible">
+
+{| class="fandom-table"
+|+'''Path 1'''
+!Rebirth
+!Droid Requirements
+!Credit Requirements
+|-
+|0 > 1
+|
+* {{Variant|Base}} [[CB]]
+* {{Variant|Base}} [[Pit]]
+* {{Variant|Base}} [[DRK-1 Probe]]
+|10K
+|-
+|1 > 2
+|
+* {{Variant|Base}} [[BDX Explorer]]⁷
+* {{Variant|Base}} [[2BB]]⁷
+* {{Variant|Base}} [[BAL-Core]]
+|150K
+|-
+|2 > 3
+|
+* {{Variant|Base}} [[A-LT]]⁷
+* {{Variant|Base}} [[B-U4D]]²
+* {{Variant|Gold}} [[R9]]²
+|975K
+|-
+|3 > 4
+|
+* {{Variant|Gold}} [[ARG]]²
+* {{Variant|Gold}} [[B1 Security]]²
+* {{Variant|Base}} [[Groundmech]]⁷
+|2.95M
+|-
+|4 > 5
+|
+* {{Variant|Gold}} [[B-U4D]]²
+* {{Variant|Gold}} [[HOV-R]]²
+* {{Variant|Diamond}} [[R9]]
+|5.35M
+|-
+|5 > 6
+|
+* {{Variant|Diamond}} [[A-LT]]⁷
+* {{Variant|Diamond}} [[ARG]]
+* {{Variant|Gold}} [[Groundmech]]⁷
+|9.85M
+|-
+|6 > 7
+|
+* {{Variant|Diamond}} [[B-U4D]]
+* {{Variant|Diamond}} [[B1 Security]]
+* {{Variant|Gold}} [[BB]]⁷
+|14.5M
+|-
+| 7 > 8
+|
+* {{Variant|Diamond}} [[HOV-R]]
+* {{Variant|Gold}} [[L0]]³
+* {{Variant|Gold}} [[Util-Tec]]
+|36M
+|-
+| 8 > 9
+|
+* {{Variant|Gold}} [[Trak-R]]
+* {{Variant|Gold}} [[R6]]⁷
+* {{Variant|Rainbow}} [[Groundmech]]⁷
+|89M
+|-
+| 9 > 10
+|
+* {{Variant|Gold}} [[Strike-Orb]]
+* {{Variant|Rainbow}} [[Haul-R]]
+* {{Variant|Rainbow}} [[L0]]
+|220M
+|-
+| 10 > 11
+|
+* {{Variant|Rainbow}} [[AMP Walker]]⁴
+* {{Variant|Rainbow}} [[B1 Heavy]]⁶
+* {{Variant|Base}} [[BB9]]⁷
+|550M
+|-
+| 11 > 12
+|
+* {{Variant|Gold}} [[Proto-Roller]]⁷
+* {{Variant|Base}} [[Mecha-Droid]]⁵
+* {{Variant|Base}} [[Mono-WLKR]]⁵
+|1.36B
+|-
+| 12 > 13
+|
+* {{Variant|Base}} [[R7]]⁷
+* {{Variant|Base}} [[Cyclo-Grav]]⁵
+* {{Variant|Base}} [[B2-RP]]⁵
+|3.40B
+|-
+| 13 > 14
+|
+* {{Variant|Base}} [[Opti-STRK]]⁴
+* {{Variant|Gold}} [[Mono-WLKR]]⁵
+* {{Variant|Gold}} [[Mecha-Droid]]⁵
+|8.45B
+|-
+| 14 > 15
+|
+* {{Variant|Gold}} [[B2-RP]]⁵
+* {{Variant|Gold}} [[BB9]]⁷
+* {{Variant|Gold}} [[R7]]⁷
+|21.00B
+|-
+| 15 > 16
+|
+* {{Variant|Gold}} [[Opti-STRK]]⁴
+* {{Variant|Diamond}} [[Mono-WLKR]]⁵
+* {{Variant|Diamond}} [[Proto-Roller]]⁷
+|52.00B
+|-
+| 16 > 17
+|
+* {{Variant|Diamond}} [[B2-RP]]⁵
+* {{Variant|Diamond}} [[Cyclo-Grav]]⁵
+* {{Variant|Diamond}} [[Mecha-Droid]]⁵
+|130.00B
+|-
+| 17 > 18
+|
+* {{Variant|Diamond}} [[BB9]]⁷
+* {{Variant|Diamond}} [[R7]]⁷
+* {{Variant|Rainbow}} [[Mono-WLKR]]⁵
+|325.00B
+|-
+| 18 > 19
+|
+* {{Variant|Rainbow}} [[B2-RP]]⁵
+* {{Variant|Rainbow}} [[Cyclo-Grav]]⁵
+* {{Variant|Rainbow}} [[Proto-Roller]]⁷
+|810.00B
+|-
+| 19 > 20
+|
+* {{Variant|Rainbow}} [[R7]]⁷
+* {{Variant|Rainbow}} [[Opti-STRK]]⁴
+* {{Variant|Rainbow}} [[Mecha-Droid]]⁵
+|2.00T
+|-
+| 20 > 21
+|
+* {{Variant|Beskar}} [[BB]]⁷
+* {{Variant|Beskar}} [[Orb-Walker]]⁵
+* {{Variant|Beskar}} [[Groundmech]]⁷
+|3.00T
+|-
+| 21 > 22
+|
+* {{Variant|Beskar}} [[AMP Walker]]
+* {{Variant|Beskar}} [[B1 Heavy]]⁶
+* {{Variant|Beskar}} [[Proto-Roller]]⁷
+|4.50T
+|-
+| 22 > 23
+|
+* {{Variant|Beskar}} [[Opti-STRK]]
+* {{Variant|Beskar}} [[Mono-WLKR]]⁵
+* {{Variant|Beskar}} [[R7]]⁷
+|6.00T
+|-
+| 23 > 24
+|
+* {{Variant|Beskar}} [[BB9]]⁷
+* {{Variant|Beskar}} [[Cyclo-Grav]]⁵
+* {{Variant|Base}} [[MO-Trak]]⁴
+|9.00T
+|-
+| 24 > 25
+|
+* {{Variant|Beskar}} [[B2-RP]]⁵
+* {{Variant|Base}} [[IG]]⁷
+* {{Variant|Gold}} [[DRFT-R]]⁷
+|13.50T
+|-
+| 25 > 26
+|
+* {{Variant|Gold}} [[Cyclens]]⁷
+* {{Variant|Diamond}} [[Loadlifter]]⁵
+* {{Variant|Rainbow}} [[RIC-1200]]
+|21.00T
+|-
+| 26 > 27
+|
+* {{Variant|Diamond}} [[KX]]⁴
+* {{Variant|Rainbow}} [[TRI-TEK]]
+* {{Variant|Beskar}} [[Snow Mouse]]⁷
+|32.00T
+|-
+|27 > 28
+|
+* {{Variant|Galactic}} [[Proto-Roller]]⁷
+* {{Variant|Rainbow}} [[MO-Trak]]
+* {{Variant|Beskar}} [[DRFT-R]]⁷
+|45.00T
+|-
+|28 > 29
+|
+* {{Variant|Galactic}} [[Mono-WLKR]]
+* {{Variant|Galactic}} [[Mecha-Droid]]
+* {{Variant|Beskar}} [[IG]]⁷
+|68.00T
+|-
+|29 > 30
+|
+* {{Variant|Galactic}} [[B2-RP]]
+* {{Variant|Beskar}} [[Cyclens]]⁷
+* {{Variant|Galactic}} [[Loadlifter]]
+|100.00T
+|-
+| 30 > 31
+|
+* {{Variant|Stellar}} [[Sen-Tri]]
+* {{Variant|Beskar}} [[Proto-Roller]]⁷
+* {{Variant|Beskar}} [[KX]]
+|150.00T
+|-
+| 31 > 32
+|
+* {{Variant|Galactic}} [[Orb-Walker]]
+* {{Variant|Galactic}} [[Opti-Pod]]
+* {{Variant|Beskar}} [[RIC]]
+|230.00T
+|-
+| 32 > 33
+|
+* {{Variant|Stellar}} [[B1 Heavy]]⁷
+* {{Variant|Galactic}} [[Cyclo-Grav]]
+* {{Variant|Galactic}} [[DRFT-R]]⁷
+|345.00T
+|-
+| 33 > 34
+|
+* {{Variant|Stellar}} [[Groundmech]]⁷
+* {{Variant|Stellar}} [[BB]]⁷
+* {{Variant|Galactic}} [[Cyclens]]⁷
+|520.00T
+|-
+| 34 > 35
+|
+* {{Variant|Stellar}} [[BB9]]⁷
+* {{Variant|Stellar}} [[IG]]⁷
+* {{Variant|Stellar}} [[Snow Mouse]]⁷
+|778.00T
+|-
+| 35 > 36
+|
+* {{Variant|Kyber}} [[BDX Explorer]]
+* {{Variant|Kyber}} [[2BB]]
+* {{Variant|Kyber}} [[A-LT]]
+|1.2Qa
+|-
+| 36 > 37
+|
+* {{Variant|Kyber}} [[B1 Heavy]]
+* {{Variant|Kyber}} [[Groundmech]]
+* {{Variant|Kyber}} [[BB]]
+|2.5Qa
+|-
+| 37 > 38
+|
+* {{Variant|Kyber}} [[R2]]
+* {{Variant|Kyber}} [[R5]]
+* {{Variant|Kyber}} [[BB9]]
+|4.5Qa
+|-
+| 38 > 39
+|
+* {{Variant|Kyber}} [[R7]]
+* {{Variant|Kyber}} [[Proto-Roller]]
+* {{Variant|Kyber}} [[IG]]
+|8Qa
+|-
+| 39 > 40
+|
+* {{Variant|Kyber}} [[Snow Mouse]]
+* {{Variant|Kyber}} [[DRFT-R]]
+* {{Variant|Kyber}} [[Cyclens]]
+|15Qa
+|}
+
+</div>
+
+=== Path 2 ===
+<div class="mw-collapsible">
+{| class="fandom-table"
+|+'''Path 2'''
+!Rebirth
+!Droid Requirements
+!Credit Requirements
+|-
+|0 > 1
+|
+* {{Variant|Base}} [[ID10]]
+* {{Variant|Base}} [[Mouse]]
+* {{Variant|Base}} [[Gonk]]
+|10K
+|-
+|1 > 2
+|
+* {{Variant|Base}} [[ROLL-R]]²
+* {{Variant|Base}} [[Senate Hovercam]]
+* {{Variant|Base}} [[NAV-EX]]³
+|150K
+|-
+|2 > 3
+|
+* {{Variant|Base}} [[R4]]⁷
+* {{Variant|Base}} [[Vect-Arm]]³
+* {{Variant|Gold}} [[BDX Explorer]]²
+|975K
+|-
+|3 > 4
+|
+* {{Variant|Gold}} [[2BB]]²
+* {{Variant|Gold}} [[BAL-Core]]⁴
+* {{Variant|Base}} [[Orb-Walker]]⁷
+|2.95M
+|-
+|4 > 5
+|
+* {{Variant|Gold}} [[R4]]⁷
+* {{Variant|Gold}} [[Vect-Arm]]³
+* {{Variant|Gold}} [[NAV-EX]]³
+|5.35M
+|-
+|5 > 6
+|
+* {{Variant|Base}} [[Gunrunner]]⁵
+* {{Variant|Diamond}} [[2BB]]
+* {{Variant|Diamond}} [[BAL-Core]]³
+|9.85M
+|-
+|6 > 7
+|
+* {{Variant|Diamond}} [[ROLL-R]]
+* {{Variant|Diamond}} [[BDX Explorer]]
+* {{Variant|Gold}} [[R2]]⁶
+|14.5M
+|-
+| 7 > 8
+|
+* {{Variant|Diamond}} [[R4]]⁷
+* {{Variant|Gold}} [[B2 Super]]⁷
+* {{Variant|Gold}} [[Gunrunner]]⁵
+|36M
+|-
+| 8 > 9
+|
+* {{Variant|Rainbow}} [[NAV-EX]]
+* {{Variant|Gold}} [[Strike-Orb]]⁴
+* {{Variant|Gold}} [[AMP Walker]]³
+|89M
+|-
+| 9 > 10
+|
+* {{Variant|Rainbow}} [[Vect-Arm]]
+* {{Variant|Diamond}} [[R2]]⁶
+* {{Variant|Diamond}} [[B2 Super]]⁷
+|220M
+|-
+| 10 > 11
+|
+* {{Variant|Rainbow}} [[BAL-Core]]
+* {{Variant|Diamond}} [[Strike-Orb]]⁴
+* {{Variant|Diamond}} [[B2 Heavy]]⁷
+|550M
+|-
+| 11 > 12
+|
+* {{Variant|Rainbow}} [[Orb-Walker]]⁷
+* {{Variant|Rainbow}} [[R2]]⁶
+* {{Variant|Base}} [[BB9]]⁴
+|1.36B
+|-
+| 12 > 13
+|
+* {{Variant|Rainbow}} [[B2 Super]]⁷
+* {{Variant|Base}} [[Mecha-Droid]]⁷
+* {{Variant|Base}} [[Proto-Roller]]⁴
+|3.40B
+|-
+| 13 > 14
+|
+* {{Variant|Rainbow}} [[B2 Heavy]]⁷
+* {{Variant|Base}} [[B2-RP]]⁷
+* {{Variant|Gold}} [[R7]]⁶
+|8.45B
+|-
+| 14 > 15
+|
+* {{Variant|Rainbow}} [[Strike-Orb]]⁴
+* {{Variant|Gold}} [[BB9]]⁴
+* {{Variant|Gold}} [[Proto-Roller]]⁴
+|21.00B
+|-
+| 15 > 16
+|
+* {{Variant|Rainbow}} [[AMP Walker]]
+* {{Variant|Gold}} [[Mecha-Droid]]⁷
+* {{Variant|Diamond}} [[B2-RP]]⁷
+|52.00B
+|-
+| 16 > 17
+|
+* {{Variant|Rainbow}} [[Opti-Pod]]
+* {{Variant|Gold}} [[Mono-WLKR]]⁴
+* {{Variant|Diamond}} [[B2-RP]]⁷
+|130.00B
+|-
+| 17 > 18
+|
+* {{Variant|Rainbow}} [[Util-Tec]]
+* {{Variant|Diamond}} [[BB9]]⁴
+* {{Variant|Diamond}} [[Proto-Roller]]⁴
+|325.00B
+|-
+| 18 > 19
+|
+* {{Variant|Diamond}} [[Mecha-Droid]]⁷
+* {{Variant|Rainbow}} [[R7]]⁶
+* {{Variant|Rainbow}} [[B2-RP]]⁷
+|810.00B
+|-
+| 19 > 20
+|
+* {{Variant|Rainbow}} [[Mono-WLKR]]⁴
+* {{Variant|Rainbow}} [[Opti-STRK]]⁵
+* {{Variant|Rainbow}} [[Cyclo-Grav]]⁷
+|2.00T
+|-
+| 20 > 21
+|
+* {{Variant|Beskar}} [[L0]]⁷
+* {{Variant|Beskar}} [[R6]]⁶
+* {{Variant|Beskar}} [[Haul-R]]
+|3.00T
+|-
+| 21 > 22
+|
+* {{Variant|Beskar}} [[Sen-Tri]]
+* {{Variant|Beskar}} [[Strike-Orb]]
+* {{Variant|Beskar}} [[Proto-Roller]]
+|4.50T
+|-
+| 22 > 23
+|
+* {{Variant|Beskar}} [[BB9]]
+* {{Variant|Beskar}} [[Cyclo-Grav]]⁷
+* {{Variant|Beskar}} [[B2-RP]]⁷
+|6.00T
+|-
+| 23 > 24
+|
+* {{Variant|Beskar}} [[Opti-STRK]]⁵
+* {{Variant|Beskar}} [[B2-RP]]⁷
+* {{Variant|Base}} [[Snow Mouse]]³
+|9.00T
+|-
+| 24 > 25
+|
+* {{Variant|Beskar}} [[Mono-WLKR]]
+* {{Variant|Gold}} [[TRI-TEK]]⁴
+* {{Variant|Base}} [[RIC-1200]]
+|13.50T
+|-
+| 25 > 26
+|
+* {{Variant|Gold}} [[KX]]⁷
+* {{Variant|Diamond}} [[DRFT-R]]⁶
+* {{Variant|Rainbow}} [[IG]]
+|21.00T
+|-
+| 26 > 27
+|
+* {{Variant|Diamond}} [[LEP]]⁷
+* {{Variant|Rainbow}} [[Loadlifter]]⁷
+* {{Variant|Beskar}} [[MO-Trak]]
+|32.00T
+|-
+|27 > 28
+|
+* {{Variant|Galactic}} [[Mecha-Droid]]⁷
+* {{Variant|Rainbow}} [[Snow Mouse]]
+* {{Variant|Beskar}} [[TRI-TEK]]
+|45.00T
+|-
+|28 > 29
+|
+* {{Variant|Galactic}} [[Cyclo-Grav]]⁷
+* {{Variant|Galactic}} [[R7]]⁶
+* {{Variant|Beskar}} [[RIC]]⁷
+|68.00T
+|-
+|29 > 30
+|
+* {{Variant|Galactic}} [[Opti-STRK]]⁻
+* {{Variant|Beskar}} [[KX]]⁷
+* {{Variant|Galactic}} [[DRFT-R]]⁶
+|100.00T
+|-
+| 30 > 31
+|
+* {{Variant|Stellar}} [[B2 Super]]⁷
+* {{Variant|Beskar}} [[B2-RP]]⁷
+* {{Variant|Beskar}} [[Loadlifter]]⁷
+|150.00T
+|-
+| 31 > 32
+|
+* {{Variant|Galactic}} [[Gunrunner]]
+* {{Variant|Galactic}} [[B1 Heavy]]
+* {{Variant|Beskar}} [[LEP]]⁷
+|230.00T
+|-
+| 32 > 33
+|
+* {{Variant|Stellar}} [[R2]]
+* {{Variant|Galactic}} [[Opti-STRK]]
+* {{Variant|Galactic}} [[KX]]⁷
+|345.00T
+|-
+| 33 > 34
+|
+* {{Variant|Stellar}} [[R6]]
+* {{Variant|Stellar}} [[L0]]⁷
+* {{Variant|Galactic}} [[RIC]]⁷
+|520.00T
+|-
+| 34 > 35
+|
+* {{Variant|Stellar}} [[R7]]
+* {{Variant|Stellar}} [[DRFT-R]]
+* {{Variant|Stellar}} [[Cyclens]]
+|778.00T
+|-
+| 35 > 36
+|
+* {{Variant|Kyber}} [[B1 Security]]
+* {{Variant|Kyber}} [[R4]]
+* {{Variant|Kyber}} [[R9]]
+|1.2Qa
+|-
+| 36 > 37
+|
+* {{Variant|Kyber}} [[L0]]
+* {{Variant|Kyber}} [[Trak-R]]
+* {{Variant|Kyber}} [[Orb-Walker]]
+|2.5Qa
+|-
+| 37 > 38
+|
+* {{Variant|Kyber}} [[B2 Super]]
+* {{Variant|Kyber}} [[B2 Heavy]]
+* {{Variant|Kyber}} [[B2-RP]]
+|4.5Qa
+|-
+| 38 > 39
+|
+* {{Variant|Kyber}} [[Mecha-Droid]]
+* {{Variant|Kyber}} [[Cyclo-Grav]]
+* {{Variant|Kyber}} [[KX]]
+|8Qa
+|-
+| 39 > 40
+|
+* {{Variant|Kyber}} [[RIC]]
+* {{Variant|Kyber}} [[Loadlifter]]
+* {{Variant|Kyber}} [[LEP]]
+|15Qa
+|}
+
+
+</div>
+
+=== Path 3 ===
+<div class="mw-collapsible">
+{| class="fandom-table"
+|+Path 3
+!Rebirth
+!Droid Requirements
+!Credit Requirements
+|-
+|0 > 1
+|
+* {{Variant|Base}} [[Mouse]]
+* {{Variant|Base}} [[Pit]]
+* {{Variant|Base}} [[Gonk]]
+|10K
+|-
+|1 > 2
+|
+* {{Variant|Base}} [[R3]]³
+* {{Variant|Base}} [[2BB]]³
+* {{Variant|Base}} [[Senate Hovercam]]⁷
+|150K
+|-
+|2 > 3
+|
+* {{Variant|Base}} [[R8]]²
+* {{Variant|Base}} [[R5]]³
+* {{Variant|Base}} [[R4]]³
+|975K
+|-
+|3 > 4
+|
+* {{Variant|Gold}} [[B1 Battle]]²
+* {{Variant|Gold}} [[R9]]²
+* {{Variant|Gold}} [[B1 Security]]³
+|2.95M
+|-
+|4 > 5
+|
+* {{Variant|Gold}} [[R3]]³
+* {{Variant|Gold}} [[2BB]]³
+* {{Variant|Gold}} [[Senate Hovercam]]⁷
+|5.35M
+|-
+|5 > 6
+|
+* {{Variant|Diamond}} [[R5]]³
+* {{Variant|Diamond}} [[R4]]³
+* {{Variant|Diamond}} [[BDX Explorer]]³
+|9.85M
+|-
+|6 > 7
+|
+* {{Variant|Diamond}} [[R8]]
+* {{Variant|Diamond}} [[B1 Battle]]
+* {{Variant|Diamond}} [[R9]]
+|14.5M
+|-
+| 7 > 8
+|
+* {{Variant|Rainbow}} [[R3]]
+* {{Variant|Rainbow}} [[2BB]]
+* {{Variant|Rainbow}} [[B1 Security]]
+|36M
+|-
+| 8 > 9
+|
+* {{Variant|Rainbow}} [[R5]]
+* {{Variant|Rainbow}} [[R4]]
+* {{Variant|Rainbow}} [[BDX Explorer]]
+|89M
+|-
+| 9 > 10
+|
+* {{Variant|Rainbow}} [[Senate Hovercam]]⁷
+* {{Variant|Base}} [[Groundmech]]⁵
+* {{Variant|Base}} [[Trak-R]]⁶
+|220M
+|-
+| 10 > 11
+|
+* {{Variant|Base}} [[B2 Heavy]]⁶
+* {{Variant|Base}} [[B2 Super]]⁶
+* {{Variant|Base}} [[Util-Tec]]⁷
+|550M
+|-
+| 11 > 12
+|
+* {{Variant|Rainbow}} [[BAL-Core]]
+* {{Variant|Gold}} [[Groundmech]]⁵
+* {{Variant|Gold}} [[Trak-R]]⁶
+|1.36B
+|-
+| 12 > 13
+|
+* {{Variant|Rainbow}} [[B2 Super]]⁶
+* {{Variant|Base}} [[Mecha-Droid]]⁵
+* {{Variant|Base}} [[Proto-Roller]]⁶
+|3.40B
+|-
+| 13 > 14
+|
+* {{Variant|Rainbow}} [[B2 Heavy]]⁶
+* {{Variant|Base}} [[B2-RP]]⁴
+* {{Variant|Gold}} [[R7]]⁵
+|8.45B
+|-
+| 14 > 15
+|
+* {{Variant|Rainbow}} [[Strike-Orb]]⁷
+* {{Variant|Gold}} [[BB9]]⁷
+* {{Variant|Gold}} [[Proto-Roller]]⁶
+|21.00B
+|-
+| 15 > 16
+|
+* {{Variant|Rainbow}} [[AMP Walker]]⁷
+* {{Variant|Gold}} [[Mecha-Droid]]⁵
+* {{Variant|Diamond}} [[B2-RP]]⁴
+|52.00B
+|-
+| 16 > 17
+|
+* {{Variant|Rainbow}} [[Opti-Pod]]⁴
+* {{Variant|Gold}} [[Mono-WLKR]]⁷
+* {{Variant|Diamond}} [[R7]]⁵
+|130.00B
+|-
+| 17 > 18
+|
+* {{Variant|Rainbow}} [[Util-Tec]]⁷
+* {{Variant|Diamond}} [[BB9]]⁷
+* {{Variant|Diamond}} [[Proto-Roller]]⁶
+|325.00B
+|-
+| 18 > 19
+|
+* {{Variant|Diamond}} [[Mecha-Droid]]⁵
+* {{Variant|Rainbow}} [[R7]]⁵
+* {{Variant|Rainbow}} [[B2-RP]]⁴
+|810.00B
+|-
+| 19 > 20
+|
+* {{Variant|Rainbow}} [[Mono-WLKR]]⁷
+* {{Variant|Rainbow}} [[Opti-STRK]]⁷
+* {{Variant|Rainbow}} [[Cyclo-Grav]]⁴
+|2.00T
+|-
+| 20 > 21
+|
+* {{Variant|Beskar}} [[B2 Super]]⁶
+* {{Variant|Beskar}} [[Opti-Pod]]
+* {{Variant|Beskar}} [[R2]]
+|3.00T
+|-
+| 21 > 22
+|
+* {{Variant|Beskar}} [[Gunrunner]]
+* {{Variant|Beskar}} [[LNG-Shot]]⁷
+* {{Variant|Beskar}} [[B2-RP]]⁻
+|4.50T
+|-
+| 22 > 23
+|
+* {{Variant|Beskar}} [[Mono-WLKR]]⁷
+* {{Variant|Beskar}} [[Cyclo-Grav]]
+* {{Variant|Beskar}} [[Mecha-Droid]]⁵
+|6.00T
+|-
+| 23 > 24
+|
+* {{Variant|Beskar}} [[BB9]]⁷
+* {{Variant|Beskar}} [[B2-RP]]
+* {{Variant|Base}} [[RIC]]⁶
+|9.00T
+|-
+| 24 > 25
+|
+* {{Variant|Beskar}} [[Proto-Roller]]⁶
+* {{Variant|Base}} [[Loadlifter]]⁵
+* {{Variant|Gold}} [[MO-Trak]]⁷
+|13.50T
+|-
+| 25 > 26
+|
+* {{Variant|Gold}} [[LEP]]⁶
+* {{Variant|Diamond}} [[TRI-TEK]]⁷
+* {{Variant|Rainbow}} [[Snow Mouse]]
+|21.00T
+|-
+| 26 > 27
+|
+* {{Variant|Diamond}} [[RIC-1200]]⁷
+* {{Variant|Rainbow}} [[IG]]⁷
+* {{Variant|Beskar}} [[DRFT-R]]⁵
+|32.00T
+|-
+|27 > 28
+|
+* {{Variant|Galactic}} [[BB9]]⁷
+* {{Variant|Rainbow}} [[RIC]]⁶
+* {{Variant|Beskar}} [[MO-Trak]]⁷
+|45.00T
+|-
+|28 > 29
+|
+* {{Variant|Galactic}} [[Mecha-Droid]]⁻
+* {{Variant|Galactic}} [[Opti-STRK]]⁷
+* {{Variant|Beskar}} [[IG]]⁷
+|68.00T
+|-
+|29 > 30
+|
+* {{Variant|Galactic}} [[R7]]
+* {{Variant|Beskar}} [[LEP]]⁵
+* {{Variant|Galactic}} [[DRFT-R]]
+|100.00T
+|-
+| 30 > 31
+|
+* {{Variant|Stellar}} [[B2 Heavy]]
+* {{Variant|Beskar}} [[Mecha-Droid]]
+* {{Variant|Beskar}} [[RIC-1200]]⁷
+|150.00T
+|-
+| 31 > 32
+|
+* {{Variant|Galactic}} [[Groundmech]]
+* {{Variant|Galactic}} [[BB]]
+* {{Variant|Beskar}} [[MO-Trak]]⁷
+|230.00T
+|-
+| 32 > 33
+|
+* {{Variant|Stellar}} [[Trak-R]]
+* {{Variant|Galactic}} [[Mono-WLKR]]⁷
+* {{Variant|Galactic}} [[Loadlifter]]
+|345.00T
+|-
+| 33 > 34
+|
+* {{Variant|Stellar}} [[Orb-Walker]]
+* {{Variant|Stellar}} [[B2 Super]]
+* {{Variant|Galactic}} [[LEP]]
+|520.00T
+|-
+| 34 > 35
+|
+* {{Variant|Stellar}} [[Proto-Roller]]
+* {{Variant|Stellar}} [[KX]]
+* {{Variant|Stellar}} [[RIC]]
+|778.00T
+|-
+| 35 > 36
+|
+* {{Variant|Kyber}} [[ARG]]
+* {{Variant|Kyber}} [[Senate Hovercam]]
+* {{Variant|Kyber}} [[B-U4D]]
+|1.2Qa
+|-
+| 36 > 37
+|
+* {{Variant|Kyber}} [[Strike-Orb]]
+* {{Variant|Kyber}} [[AMP Walker]]
+* {{Variant|Kyber}} [[Util-Tec]]
+|2.5Qa
+|-
+| 37 > 38
+|
+* {{Variant|Kyber}} [[Haul-R]]
+* {{Variant|Kyber}} [[LNG-Shot]]
+* {{Variant|Kyber}} [[Opti-STRK]]
+|4.5Qa
+|-
+| 38 > 39
+|
+* {{Variant|Kyber}} [[Mono-WLKR]]
+* {{Variant|Kyber}} [[BB9]]
+* {{Variant|Kyber}} [[RIC-1200]]
+|8Qa
+|-
+| 39 > 40
+|
+* {{Variant|Kyber}} [[MO-Trak]]
+* {{Variant|Kyber}} [[TRI-TEK]]
+* {{Variant|Kyber}} [[IG]]
+|15Qa
+|}
+
+
+</div>
+
+=== Path 4 ===
+<div class="mw-collapsible">
+{| class="fandom-table"
+|+Path 4
+!Rebirth
+!Droid Requirements
+!Credit Requirements
+|-
+|0 > 1
+|
+* {{Variant|Base}} [[ID10]]
+* {{Variant|Base}} [[Pit]]
+* {{Variant|Base}} [[DRK-1 Probe]]
+|10K
+|-
+|1 > 2
+|
+* {{Variant|Base}} [[R3]]³
+* {{Variant|Base}} [[2BB]]³
+* {{Variant|Base}} [[Senate Hovercam]]³
+|150K
+|-
+|2 > 3
+|
+* {{Variant|Gold}} [[R5]]³
+* {{Variant|Gold}} [[R8]]²
+* {{Variant|Base}} [[R4]]³
+|975K
+|-
+|3 > 4
+|
+* {{Variant|Gold}} [[B1 Battle]]²
+* {{Variant|Gold}} [[R9]]²
+* {{Variant|Gold}} [[B1 Security]]³
+|2.95M
+|-
+|4 > 5
+|
+* {{Variant|Gold}} [[R3]]³
+* {{Variant|Gold}} [[2BB]]³
+* {{Variant|Gold}} [[Senate Hovercam]]³
+|5.35M
+|-
+|5 > 6
+|
+* {{Variant|Diamond}} [[R5]]³
+* {{Variant|Diamond}} [[R4]]³
+* {{Variant|Diamond}} [[BDX Explorer]]³
+|9.85M
+|-
+|6 > 7
+|
+* {{Variant|Diamond}} [[R8]]
+* {{Variant|Diamond}} [[B1 Battle]]
+* {{Variant|Diamond}} [[R9]]
+|14.5M
+|-
+| 7 > 8
+|
+* {{Variant|Rainbow}} [[R3]]
+* {{Variant|Rainbow}} [[B1 Security]]
+* {{Variant|Rainbow}} [[2BB]]
+|36M
+|-
+| 8 > 9
+|
+* {{Variant|Rainbow}} [[R5]]
+* {{Variant|Rainbow}} [[R4]]
+* {{Variant|Rainbow}} [[BDX Explorer]]
+|89M
+|-
+| 9 > 10
+|
+* {{Variant|Rainbow}} [[Senate Hovercam]]
+* {{Variant|Base}} [[Groundmech]]⁷
+* {{Variant|Base}} [[Trak-R]]⁶
+|220M
+|-
+| 10 > 11
+|
+* {{Variant|Base}} [[B2 Heavy]]⁶
+* {{Variant|Base}} [[B2 Super]]⁴
+* {{Variant|Base}} [[Util-Tec]]³
+|550M
+|-
+| 11 > 12
+|
+* {{Variant|Rainbow}} [[BAL-Core]]⁻
+* {{Variant|Gold}} [[Groundmech]]⁷
+* {{Variant|Gold}} [[Trak-R]]⁶
+|1.36B
+|-
+| 12 > 13
+|
+* {{Variant|Rainbow}} [[B2 Super]]⁴
+* {{Variant|Base}} [[Mecha-Droid]]⁴
+* {{Variant|Base}} [[Proto-Roller]]⁴
+|3.40B
+|-
+| 13 > 14
+|
+* {{Variant|Diamond}} [[BAL-Core]]
+* {{Variant|Diamond}} [[Groundmech]]⁷
+* {{Variant|Rainbow}} [[Trak-R]]⁷
+|8.45B
+|-
+| 14 > 15
+|
+* {{Variant|Diamond}} [[B2 Heavy]]⁶
+* {{Variant|Rainbow}} [[B2 Super]]⁴
+* {{Variant|Base}} [[B2-RP]]⁷
+|21.00B
+|-
+| 15 > 16
+|
+* {{Variant|Rainbow}} [[Util-Tec]]
+* {{Variant|Base}} [[BB9]]⁵
+* {{Variant|Gold}} [[R7]]⁷
+|52.00B
+|-
+| 16 > 17
+|
+* {{Variant|Base}} [[Opti-STRK]]⁵
+* {{Variant|Gold}} [[Cyclo-Grav]]⁴
+* {{Variant|Gold}} [[Mecha-Droid]]⁴
+|130.00B
+|-
+| 17 > 18
+|
+* {{Variant|Gold}} [[B2-RP]]⁷
+* {{Variant|Gold}} [[BB9]]⁵
+* {{Variant|Diamond}} [[R7]]⁷
+|325.00B
+|-
+| 18 > 19
+|
+* {{Variant|Diamond}} [[Mecha-Droid]]⁴
+* {{Variant|Rainbow}} [[R7]]⁷
+* {{Variant|Rainbow}} [[B2-RP]]⁷
+|810.00B
+|-
+| 19 > 20
+|
+* {{Variant|Rainbow}} [[Mono-WLKR]]⁵
+* {{Variant|Rainbow}} [[Opti-STRK]]⁵
+* {{Variant|Rainbow}} [[Cyclo-Grav]]⁴
+|2.00T
+|-
+| 20 > 21
+|
+* {{Variant|Beskar}} [[AMP Walker]]⁶
+* {{Variant|Beskar}} [[Groundmech]]⁷
+* {{Variant|Beskar}} [[Haul-R]]
+|3.00T
+|-
+| 21 > 22
+|
+* {{Variant|Beskar}} [[Gunrunner]]⁷
+* {{Variant|Beskar}} [[Strike-Orb]]⁶
+* {{Variant|Beskar}} [[B2 Super]]
+|4.50T
+|-
+| 22 > 23
+|
+* {{Variant|Beskar}} [[Mono-WLKR]]⁵
+* {{Variant|Beskar}} [[Cyclo-Grav]]⁻
+* {{Variant|Beskar}} [[B2-RP]]⁷
+|6.00T
+|-
+| 23 > 24
+|
+* {{Variant|Beskar}} [[Mecha-Droid]]
+* {{Variant|Beskar}} [[Proto-Roller]]⁷
+* {{Variant|Base}} [[MO-Trak]]⁵
+|9.00T
+|-
+| 24 > 25
+|
+* {{Variant|Beskar}} [[Opti-STRK]]⁵
+* {{Variant|Base}} [[TRI-TEK]]⁴
+* {{Variant|Gold}} [[DRFT-R]]⁷
+|13.50T
+|-
+| 25 > 26
+|
+* {{Variant|Gold}} [[Cyclens]]⁷
+* {{Variant|Diamond}} [[LEP]]⁶
+* {{Variant|Rainbow}} [[MO-Trak]]⁵
+|21.00T
+|-
+| 26 > 27
+|
+* {{Variant|Diamond}} [[RIC-1200]]⁵
+* {{Variant|Rainbow}} [[Snow Mouse]]⁷
+* {{Variant|Beskar}} [[Loadlifter]]⁶
+|32.00T
+|-
+|27 > 28
+|
+* {{Variant|Galactic}} [[Opti-STRK]]
+* {{Variant|Rainbow}} [[IG]]⁵
+* {{Variant|Beskar}} [[KX]]⁷
+|45.00T
+|-
+|28 > 29
+|
+* {{Variant|Galactic}} [[BB9]]⁻
+* {{Variant|Galactic}} [[R7]]⁷
+* {{Variant|Beskar}} [[TRI-TEK]]⁻
+|68.00T
+|-
+|29 > 30
+|
+* {{Variant|Galactic}} [[Mono-WLKR]]
+* {{Variant|Beskar}} [[Cyclens]]⁷
+* {{Variant|Galactic}} [[IG]]⁻
+|100.00T
+|-
+| 30 > 31
+|
+* {{Variant|Stellar}} [[Trak-R]]
+* {{Variant|Beskar}} [[Cyclo-Grav]]
+* {{Variant|Beskar}} [[TRI-TEK]]
+|150.00T
+|-
+| 31 > 32
+|
+* {{Variant|Galactic}} [[R2]]
+* {{Variant|Galactic}} [[R6]]
+* {{Variant|Beskar}} [[IG]]
+|230.00T
+|-
+| 32 > 33
+|
+* {{Variant|Stellar}} [[B2 Heavy]]
+* {{Variant|Galactic}} [[BB9]]
+* {{Variant|Galactic}} [[RIC-1200]]
+|345.00T
+|-
+| 33 > 34
+|
+* {{Variant|Stellar}} [[Strike-Orb]]
+* {{Variant|Stellar}} [[AMP Walker]]
+* {{Variant|Galactic}} [[MO-Trak]]
+|520.00T
+|-
+| 34 > 35
+|
+* {{Variant|Stellar}} [[B2-RP]]⁷
+* {{Variant|Stellar}} [[Loadlifter]]
+* {{Variant|Stellar}} [[LEP]]
+|778.00T
+|-
+| 35 > 36
+|
+* {{Variant|Kyber}} [[NAV-EX]]
+* {{Variant|Kyber}} [[BAL-Core]]
+* {{Variant|Kyber}} [[Vect-Arm]]
+|1.2Qa
+|-
+| 36 > 37
+|
+* {{Variant|Kyber}} [[Sen-Tri]]
+* {{Variant|Kyber}} [[Opti-Pod]]
+* {{Variant|Kyber}} [[Gunrunner]]
+|2.5Qa
+|-
+| 37 > 38
+|
+* {{Variant|Kyber}} [[B1 Heavy]]
+* {{Variant|Kyber}} [[Groundmech]]
+* {{Variant|Kyber}} [[R7]]
+|4.5Qa
+|-
+| 38 > 39
+|
+* {{Variant|Kyber}} [[Proto-Roller]]
+* {{Variant|Kyber}} [[B2-RP]]
+* {{Variant|Kyber}} [[Snow Mouse]]
+|8Qa
+|-
+| 39 > 40
+|
+* {{Variant|Kyber}} [[DRFT-R]]
+* {{Variant|Kyber}} [[Cyclens]]
+* {{Variant|Kyber}} [[KX]]
+|15Qa
+|}
+
+</div>
+
+=== Path 5 ===
+<div class="mw-collapsible">
+{| class="fandom-table"
+|+'''Path 5'''
+!Rebirth
+!Droid Requirements
+!Credit Requirements
+|-
+|0 > 1
+|
+* {{Variant|Base}} [[ID10]]
+* {{Variant|Base}} [[Mouse]]⁷
+* {{Variant|Base}} [[Gonk]]
+|10K
+|-
+|1 > 2
+|
+* {{Variant|Base}} [[2BB]]²
+* {{Variant|Gold}} [[Imperial Probe]]⁴
+* {{Variant|Base}} [[ROLL-R]]⁷
+|150K
+|-
+|2 > 3
+|
+* {{Variant|Base}} [[R4]]¹
+* {{Variant|Base}} [[Vect-Arm]]
+* {{Variant|Gold}} [[BDX Explorer]]²
+|975K
+|-
+|3 > 4
+|
+* {{Variant|Gold}} [[R9]]
+* {{Variant|Gold}} [[B1 Battle]]²
+* {{Variant|Gold}} [[B1 Security]]
+|2.95M
+|-
+|4 > 5
+|
+* {{Variant|Gold}} [[BAL-Core]]³
+* {{Variant|Gold}} [[R4]]
+* {{Variant|Gold}} [[R3]]
+|5.35M
+|-
+|5 > 6
+|
+* {{Variant|Base}} [[Gunrunner]]⁴
+* {{Variant|Diamond}} [[2BB]]
+* {{Variant|Diamond}} [[BDX Explorer]]
+|9.85M
+|-
+|6 > 7
+|
+* {{Variant|Diamond}} [[ROLL-R]]⁷
+* {{Variant|Diamond}} [[R5]]
+* {{Variant|Gold}} [[R2]]⁷
+|14.5M
+|-
+| 7 > 8
+|
+* {{Variant|Gold}} [[B2 Super]]²
+* {{Variant|Diamond}} [[R8]]
+* {{Variant|Diamond}} [[B1 Battle]]
+|36M
+|-
+| 8 > 9
+|
+* {{Variant|Rainbow}} [[NAV-EX]]
+* {{Variant|Gold}} [[Strike-Orb]]⁴
+* {{Variant|Gold}} [[AMP Walker]]⁵
+|89M
+|-
+| 9 > 10
+|
+* {{Variant|Beskar}} [[Imperial Probe]]
+* {{Variant|Base}} [[Groundmech]]²
+* {{Variant|Base}} [[Trak-R]]⁷
+|220M
+|-
+| 10 > 11
+|
+* {{Variant|Base}} [[B2 Heavy]]²
+* {{Variant|Base}} [[B2 Super]]²
+* {{Variant|Base}} [[Util-Tec]]⁶
+|550M
+|-
+| 11 > 12
+|
+* {{Variant|Rainbow}} [[BAL-Core]]
+* {{Variant|Gold}} [[Groundmech]]²
+* {{Variant|Gold}} [[Trak-R]]⁷
+|1.36B
+|-
+| 12 > 13
+|
+* {{Variant|Gold}} [[B2 Super]]²
+* {{Variant|Gold}} [[B2 Heavy]]²
+* {{Variant|Diamond}} [[R2]]⁷
+|3.40B
+|-
+| 13 > 14
+|
+* {{Variant|Diamond}} [[Groundmech]]
+* {{Variant|Diamond}} [[Trak-R]]⁷
+* {{Variant|Rainbow}} [[Util-Tec]]⁶
+|8.45B
+|-
+| 14 > 15
+|
+* {{Variant|Diamond}} [[B2 Heavy]]
+* {{Variant|Diamond}} [[B2 Super]]
+* {{Variant|Base}} [[B2-RP]]⁴
+|21.00B
+|-
+| 15 > 16
+|
+* {{Variant|Base}} [[BB9]]⁵
+* {{Variant|Gold}} [[R7]]⁵
+* {{Variant|Gold}} [[Proto-Roller]]
+|52.00B
+|-
+| 16 > 17
+|
+* {{Variant|Base}} [[Opti-STRK]]⁷
+* {{Variant|Gold}} [[Cyclo-Grav]]⁷
+* {{Variant|Gold}} [[Mecha-Droid]]⁷
+|130.00B
+|-
+| 17 > 18
+|
+* {{Variant|Gold}} [[BB9]]⁵
+* {{Variant|Gold}} [[B2-RP]]⁴
+* {{Variant|Diamond}} [[R7]]⁵
+|325.00B
+|-
+| 18 > 19
+|
+* {{Variant|Diamond}} [[Opti-STRK]]⁷
+* {{Variant|Diamond}} [[Cyclo-Grav]]⁷
+* {{Variant|Rainbow}} [[Mecha-Droid]]⁷
+|810.00B
+|-
+| 19 > 20
+|
+* {{Variant|Rainbow}} [[B2-RP]]⁴
+* {{Variant|Rainbow}} [[BB9]]⁵
+* {{Variant|Rainbow}} [[R7]]⁵
+|2.00T
+|-
+| 20 > 21
+|
+* {{Variant|Beskar}} [[L0]]⁷
+* {{Variant|Beskar}} [[Strike-Orb]]
+* {{Variant|Beskar}} [[Haul-R]]⁶
+|3.00T
+|-
+| 21 > 22
+|
+* {{Variant|Beskar}} [[Sen-Tri]]
+* {{Variant|Beskar}} [[R6]]⁷
+* {{Variant|Beskar}} [[Gunrunner]]
+|4.50T
+|-
+| 22 > 23
+|
+* {{Variant|Beskar}} [[BB9]]⁵
+* {{Variant|Beskar}} [[Cyclo-Grav]]⁷
+* {{Variant|Beskar}} [[B2-RP]]
+|6.00T
+|-
+| 23 > 24
+|
+* {{Variant|Beskar}} [[Mono-WLKR]]
+* {{Variant|Beskar}} [[Opti-STRK]]⁷
+* {{Variant|Base}} [[MO-Trak]]⁶
+|9.00T
+|-
+| 24 > 25
+|
+* {{Variant|Beskar}} [[Mecha-Droid]]⁷
+* {{Variant|Base}} [[RIC]]⁷
+* {{Variant|Gold}} [[TRI-TEK]]⁵
+|13.50T
+|-
+| 25 > 26
+|
+* {{Variant|Gold}} [[Cyclens]]⁵
+* {{Variant|Diamond}} [[LEP]]⁷
+* {{Variant|Rainbow}} [[Snow Mouse]]⁴
+|21.00T
+|-
+| 26 > 27
+|
+* {{Variant|Diamond}} [[RIC-1200]]⁷
+* {{Variant|Rainbow}} [[IG]]⁵
+* {{Variant|Beskar}} [[Loadlifter]]⁷
+|32.00T
+|-
+|27 > 28
+|
+* {{Variant|Rainbow}} [[RIC]]⁷
+* {{Variant|Beskar}} [[MO-Trak]]⁶
+* {{Variant|Galactic}} [[BB9]]
+|45.00T
+|-
+|28 > 29
+|
+* {{Variant|Beskar}} [[IG]]⁵
+* {{Variant|Galactic}} [[Mecha-Droid]]⁷
+* {{Variant|Galactic}} [[Opti-STRK]]⁷
+|68.00T
+|-
+|29 > 30
+|
+* {{Variant|Galactic}} [[R7]]⁻
+* {{Variant|Beskar}} [[LEP]]⁷
+* {{Variant|Galactic}} [[Cyclens]]
+|100.00T
+|-
+| 30 > 31
+|
+* {{Variant|Stellar}} [[AMP Walker]]
+* {{Variant|Beskar}} [[Opti-STRK]]⁷
+* {{Variant|Beskar}} [[Snow Mouse]]
+|150.00T
+|-
+| 31 > 32
+|
+* {{Variant|Galactic}} [[L0]]⁷
+* {{Variant|Galactic}} [[Trak-R]]⁷
+* {{Variant|Beskar}} [[DRFT-R]]
+|230.00T
+|-
+| 32 > 33
+|
+* {{Variant|Stellar}} [[Util-Tec]]
+* {{Variant|Galactic}} [[R7]]
+* {{Variant|Galactic}} [[TRI-TEK]]
+|345.00T
+|-
+| 33 > 34
+|
+* {{Variant|Stellar}} [[Haul-R]]
+* {{Variant|Stellar}} [[LNG-Shot]]
+* {{Variant|Galactic}} [[IG]]
+|520.00T
+|-
+| 34 > 35
+|
+* {{Variant|Stellar}} [[Mecha-Droid]]⁷
+* {{Variant|Stellar}} [[RIC-1200]]⁷
+* {{Variant|Stellar}} [[MO-Trak]]
+|778.00T
+|-
+| 35 > 36
+| 
+* {{Variant|Kyber}} [[ROLL-R]]
+* {{Variant|Kyber}} [[HOV-R]]
+* {{Variant|Kyber}} [[Mouse]]
+|1.2Qa
+|-
+| 36 > 37
+|
+* {{Variant|Kyber}} [[BB]]
+* {{Variant|Kyber}} [[R2]]
+* {{Variant|Kyber}} [[R6]]
+|2.5Qa
+|-
+| 37 > 38
+|
+* {{Variant|Kyber}} [[L0]]
+* {{Variant|Kyber}} [[Trak-R]]
+* {{Variant|Kyber}} [[Mecha-Droid]]
+|4.5Qa
+|-
+| 38 > 39
+|
+* {{Variant|Kyber}} [[Cyclo-Grav]]
+* {{Variant|Kyber}} [[Opti-STRK]]
+* {{Variant|Kyber}} [[RIC]]
+|8Qa
+|-
+| 39 > 40
+|
+* {{Variant|Kyber}} [[Loadlifter]]
+* {{Variant|Kyber}} [[LEP]]
+* {{Variant|Kyber}} [[RIC-1200]]
+|15Qa
+|}
+
+
+</div>

@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to add bot
   function addBot() {
+    console.log("addBot function called");
     const botInput = document.getElementById('bot-input').value.trim();
     const selectedVariant = variantSelect.value;
     if (botInput && selectedVariant) {
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to mark bot as sold
   function markSold(botName, variant) {
+    console.log("markSold function called with", botName, variant);
     const ownedBotsList = document.getElementById('owned-bots-list');
     const li = Array.from(ownedBotsList.children).find(li => li.textContent.includes(`${botName} (${variant})`));
     if (li) {
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to upgrade bot
   function upgradeBot(botName, variant) {
+    console.log("upgradeBot function called with", botName, variant);
     const ownedBotsList = document.getElementById('owned-bots-list');
     const li = Array.from(ownedBotsList.children).find(li => li.textContent.includes(`${botName} (${variant})`));
     if (li) {
@@ -52,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to predict path
   function predictPath() {
+    console.log("predictPath function called");
     const currentRebirth = document.getElementById('current-rebirth').value.trim();
     const bot1 = document.getElementById('bot1').value.trim();
     const bot2 = document.getElementById('bot2').value.trim();
@@ -72,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to generate advice
   function generateAdvice() {
+    console.log("generateAdvice function called");
     const ownedBots = Array.from(document.getElementById('owned-bots-list').children).map(li => li.textContent.split('(')[0].trim());
     const adviceList = document.getElementById('advice-list');
     adviceList.innerHTML = ''; // Clear existing advice
@@ -91,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add event listener for checking if bot is needed
   function checkIfNeeded() {
+    console.log("checkIfNeeded function called");
     generateAdvice();
   }
 });
