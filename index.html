@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Manager</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bot Companion App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bot Manager</h1>
-    <form id="botForm">
-        <label for="modelName">Model Name:</label>
-        <input type="text" id="modelName" name="modelName" required>
-        <label for="quality">Quality:</label>
-        <input type="number" id="quality" name="quality" required>
-        <button type="submit">Add Bot</button>
-        <button type="button" onclick="provideAdvice()">Provide Advice</button>
-    </form>
-    <ul id="botList"></ul>
-    <h2>Advice</h2>
-    <p id="advice"></p>
-    <script src="script.js"></script>
+    <h1>Bot Companion App</h1>
+    
+    <div class="section" id="add-bot-section">
+        <h2>Add Bot</h2>
+        <input type="text" id="bot-input" placeholder="Enter bot name">
+        <select id="variant-select"></select>
+        <button onclick="addBot()">Add</button>
+        <button onclick="checkIfNeeded()">Check if Needed</button>
+    </div>
+
+    <div class="section" id="path-predictor-section">
+        <h2>Path Predictor</h2>
+        <input type="number" id="current-rebirth" placeholder="Current Rebirth">
+        <input type="text" id="bot1" placeholder="Bot 1">
+        <input type="text" id="bot2" placeholder="Bot 2">
+        <input type="text" id="bot3" placeholder="Bot 3">
+        <button onclick="predictPath()">Predict Path</button>
+    </div>
+
+    <div class="section" id="owned-bots-section">
+        <h2>Owned Bots</h2>
+        <ul id="owned-bots-list"></ul>
+    </div>
+
+    <div class="section" id="advice-section">
+        <h2>Advice</h2>
+        <ul id="advice-list"></ul>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+```
