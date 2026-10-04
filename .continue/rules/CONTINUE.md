@@ -46,6 +46,7 @@ This project does not currently have automated tests. Manual testing is required
 ## Key Files and Their Roles
 
 - **`index.html`**: The main HTML file with the structure and layout.
+- **`style.css`**: Stylesheet defining the visual presentation and layout.
 - **`data.js`**: Contains JSON data for bot variants and paths.
 - **`app.js`**: Handles the logic for adding bots, predicting paths, updating owned bots, and generating advice.
 

@@ -4,65 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars Drone Tycoon - Helper</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px auto;
-            max-width: 800px;
-            line-height: 1.5;
-            color: #333;
-        }
-        h1 {
-            color: #1e293b;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 20px;
-            padding: 16px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            background-color: #f8fafc;
-        }
-        .section h2 {
-            margin-top: 0;
-            color: #0f172a;
-        }
-        input, select, button {
-            padding: 6px 10px;
-            margin: 4px 2px;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #0284c7;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0369a1;
-        }
-        button:disabled {
-            background-color: #94a3b8;
-            cursor: not-allowed;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 6px;
-        }
-        .result-box {
-            margin-top: 10px;
-            padding: 8px 12px;
-            background: #ffffff;
-            border-radius: 4px;
-            border: 1px solid #e2e8f0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Star Wars Drone Tycoon Companion App</h1>
@@ -89,7 +31,7 @@
                 <option value="4">Path 4</option>
                 <option value="5">Path 5</option>
             </select>
-            <small style="color: #64748b;">(Used for checking bots and generating rebirth advice)</small>
+            <small class="text-muted">(Used for checking bots and generating rebirth advice)</small>
         </p>
     </div>
 
@@ -108,8 +50,8 @@
     </div>
 
     <div class="section" id="advice-section">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h2 style="margin: 0;">Rebirth & Strategy Advice</h2>
+        <div class="flex-header">
+            <h2>Rebirth & Strategy Advice</h2>
             <button onclick="generateAdvice()">Refresh Advice</button>
         </div>
         <ul id="advice-list" style="margin-top: 12px;"></ul>
