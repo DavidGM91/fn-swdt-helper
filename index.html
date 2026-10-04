@@ -12,49 +12,80 @@
     <!-- Datalist for 52 bot names autocomplete -->
     <datalist id="bots-datalist"></datalist>
 
+    <!-- Section 1: Path Predictor -->
     <div class="section" id="path-predictor-section">
-        <h2>Path Predictor & Settings</h2>
-        <p>Enter your current rebirth and the bots required by the game to determine your Path (1 to 5):</p>
-        <input type="text" id="current-rebirth" placeholder="Current Rebirth (e.g. 0, 1, or 0 > 1)">
-        <input type="text" id="bot1" list="bots-datalist" placeholder="Bot 1 (e.g. CB)">
-        <input type="text" id="bot2" list="bots-datalist" placeholder="Bot 2 (e.g. Pit)">
-        <input type="text" id="bot3" list="bots-datalist" placeholder="Bot 3 (e.g. DRK-1 Probe)">
-        <button onclick="predictPath()">Predict Path</button>
-        <div id="prediction-result" class="result-box">No path predicted yet. Enter bots above or select your path below.</div>
-
-        <p style="margin-top: 14px; margin-bottom: 0;">
-            <label for="active-path-select"><strong>Active Path:</strong></label>
-            <select id="active-path-select">
-                <option value="1">Path 1</option>
-                <option value="2">Path 2</option>
-                <option value="3">Path 3</option>
-                <option value="4">Path 4</option>
-                <option value="5">Path 5</option>
-            </select>
-            <small class="text-muted">(Used for checking bots and generating rebirth advice)</small>
-        </p>
-    </div>
-
-    <div class="section" id="add-bot-section">
-        <h2>Add Bot / Check Status</h2>
-        <input type="text" id="bot-input" list="bots-datalist" placeholder="Enter bot name (e.g. R9)">
-        <select id="variant-select"></select>
-        <button onclick="addBot()">Add to Owned</button>
-        <button onclick="checkIfNeeded()">Check if Needed</button>
-        <div id="check-needed-result" class="result-box">Enter a bot above and click "Check if Needed" to see if it is required for your path or safe to sell.</div>
-    </div>
-
-    <div class="section" id="owned-bots-section">
-        <h2>Owned Bots</h2>
-        <ul id="owned-bots-list"></ul>
-    </div>
-
-    <div class="section" id="advice-section">
-        <div class="flex-header">
-            <h2>Rebirth & Strategy Advice</h2>
-            <button onclick="generateAdvice()">Refresh Advice</button>
+        <div class="section-header" tabindex="0" role="button" aria-expanded="true">
+            <h2>Path Predictor & Settings</h2>
+            <span class="collapse-arrow">&#9662;</span>
         </div>
-        <ul id="advice-list" style="margin-top: 12px;"></ul>
+        <div class="section-body">
+            <p>Enter your current rebirth and the bots required by the game to determine your Path (1 to 5):</p>
+            <input type="text" id="current-rebirth" placeholder="Current Rebirth (e.g. 0, 1, or 0 > 1)">
+            <input type="text" id="bot1" list="bots-datalist" placeholder="Bot 1 (e.g. CB)">
+            <input type="text" id="bot2" list="bots-datalist" placeholder="Bot 2 (e.g. Pit)">
+            <input type="text" id="bot3" list="bots-datalist" placeholder="Bot 3 (e.g. DRK-1 Probe)">
+            <button onclick="predictPath()">Predict Path</button>
+            <div id="prediction-result" class="result-box">No path predicted yet. Enter bots above or select your path below.</div>
+
+            <p style="margin-top: 14px; margin-bottom: 0;">
+                <label for="active-path-select"><strong>Active Path:</strong></label>
+                <select id="active-path-select">
+                    <option value="1">Path 1</option>
+                    <option value="2">Path 2</option>
+                    <option value="3">Path 3</option>
+                    <option value="4">Path 4</option>
+                    <option value="5">Path 5</option>
+                </select>
+                <small class="text-muted">(Used for checking bots and generating whole path advice)</small>
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2: Add Bot / Check Status -->
+    <div class="section" id="add-bot-section">
+        <div class="section-header" tabindex="0" role="button" aria-expanded="true">
+            <h2>Add Bot / Check Status</h2>
+            <span class="collapse-arrow">&#9662;</span>
+        </div>
+        <div class="section-body">
+            <input type="text" id="bot-input" list="bots-datalist" placeholder="Enter bot name (e.g. R9)">
+            <select id="variant-select"></select>
+            <button onclick="addBot()">Add to Owned</button>
+            <button onclick="checkIfNeeded()">Check if Needed</button>
+            <div id="check-needed-result" class="result-box">Enter a bot above and click "Check if Needed" to see if it is required for your path or safe to sell.</div>
+        </div>
+    </div>
+
+    <!-- Section 3: Owned Bots -->
+    <div class="section" id="owned-bots-section">
+        <div class="section-header" tabindex="0" role="button" aria-expanded="true">
+            <h2>Owned Bots (<span id="owned-count">0</span>)</h2>
+            <span class="collapse-arrow">&#9662;</span>
+        </div>
+        <div class="section-body">
+            <ul id="owned-bots-list" style="padding-left: 0; list-style: none;"></ul>
+        </div>
+    </div>
+
+    <!-- Section 4: Whole Path Bot Advice -->
+    <div class="section" id="advice-section">
+        <div class="section-header" tabindex="0" role="button" aria-expanded="true">
+            <h2>Whole Path Bot Advice & Progression</h2>
+            <div class="header-actions">
+                <button onclick="event.stopPropagation(); generateAdvice()">Refresh Advice</button>
+                <span class="collapse-arrow">&#9662;</span>
+            </div>
+        </div>
+        <div class="section-body">
+            <div id="advice-summary" class="advice-summary-box"></div>
+            <div class="filter-bar" id="advice-filters">
+                <button class="filter-btn active" onclick="setAdviceFilter('all')">All Bots</button>
+                <button class="filter-btn" onclick="setAdviceFilter('missing')">Missing</button>
+                <button class="filter-btn" onclick="setAdviceFilter('upgrade')">Needs Upgrade</button>
+                <button class="filter-btn" onclick="setAdviceFilter('ready')">Ready</button>
+            </div>
+            <ul id="advice-list" style="padding-left: 0; list-style: none; margin-top: 10px;"></ul>
+        </div>
     </div>
 
     <!-- Scripts loaded at end of body -->

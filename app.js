@@ -3,8 +3,21 @@
 // State
 let ownedBots = [];
 let activePath = '1';
+let currentAdviceFilter = 'all';
 
 // Helpers
+function getVariantIndex(variantName) {
+  if (!variantName || typeof data === 'undefined' || !data.Variants) return 0;
+  const v = data.Variants.find(item => item.name.toLowerCase() === variantName.toLowerCase());
+  return v ? parseInt(v.index, 10) : 0;
+}
+
+function getVariantByIndex(idx) {
+  if (typeof data === 'undefined' || !data.Variants) return 'Base';
+  const v = data.Variants.find(item => parseInt(item.index, 10) === idx);
+  return v ? v.name : 'Base';
+}
+
 function normalizeRebirth(input) {
   if (input === null || input === undefined) return '';
   const str = input.toString().trim();
@@ -51,70 +64,105 @@ function loadState() {
   }
 }
 
+// Collapsible Section Toggle
+function toggleSection(headerEl) {
+  const section = headerEl.closest('.section');
+  if (!section) return;
+  const isCollapsed = section.classList.toggle('collapsed');
+  headerEl.setAttribute('aria-expanded', !isCollapsed);
+}
+
 // Render owned bots list
 function renderOwnedBots() {
   const ownedBotsList = document.getElementById('owned-bots-list');
+  const countEl = document.getElementById('owned-count');
   if (!ownedBotsList) return;
   ownedBotsList.innerHTML = '';
+
+  const activeCount = ownedBots.filter(b => !b.sold).length;
+  if (countEl) countEl.textContent = `${activeCount}`;
 
   if (ownedBots.length === 0) {
     const emptyLi = document.createElement('li');
     emptyLi.style.color = '#888';
-    emptyLi.textContent = 'No bots added yet. Add a bot above!';
+    emptyLi.style.padding = '8px 0';
+    emptyLi.textContent = 'No bots added yet. Add a bot above or click "+ Add" on needed path bots below!';
     ownedBotsList.appendChild(emptyLi);
     return;
   }
 
   ownedBots.forEach((bot) => {
     const li = document.createElement('li');
-    li.style.marginBottom = '6px';
+    li.style.marginBottom = '8px';
+    li.style.padding = '6px 10px';
+    li.style.background = '#ffffff';
+    li.style.borderRadius = '4px';
+    li.style.border = '1px solid #e2e8f0';
+    li.style.display = 'flex';
+    li.style.justifyContent = 'space-between';
+    li.style.alignItems = 'center';
+    li.style.flexWrap = 'wrap';
+    li.style.gap = '6px';
+
     if (bot.sold) {
       li.style.textDecoration = 'line-through';
-      li.style.color = '#777';
+      li.style.color = '#94a3b8';
+      li.style.backgroundColor = '#f1f5f9';
     }
 
     const textSpan = document.createElement('span');
-    textSpan.textContent = `${bot.name} (${bot.variant}) `;
+    textSpan.innerHTML = `<strong>${bot.name}</strong> <span class="badge badge-variant">${bot.variant}</span>`;
     li.appendChild(textSpan);
+
+    const btnGroup = document.createElement('div');
 
     // Sold button
     const soldBtn = document.createElement('button');
-    soldBtn.textContent = bot.sold ? 'Unsold' : 'Sold';
+    soldBtn.textContent = bot.sold ? 'Unsold' : 'Mark Sold';
     soldBtn.style.marginRight = '5px';
+    soldBtn.style.fontSize = '12px';
+    soldBtn.style.padding = '3px 8px';
     soldBtn.addEventListener('click', () => markSold(bot.id));
-    li.appendChild(soldBtn);
+    btnGroup.appendChild(soldBtn);
 
     // Upgrade button
     const upgradeBtn = document.createElement('button');
     upgradeBtn.textContent = 'Upgrade';
     upgradeBtn.style.marginRight = '5px';
+    upgradeBtn.style.fontSize = '12px';
+    upgradeBtn.style.padding = '3px 8px';
     upgradeBtn.disabled = bot.sold;
     upgradeBtn.addEventListener('click', () => upgradeBot(bot.id));
-    li.appendChild(upgradeBtn);
+    btnGroup.appendChild(upgradeBtn);
 
     // Delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Remove';
+    deleteBtn.style.backgroundColor = '#ef4444';
+    deleteBtn.style.fontSize = '12px';
+    deleteBtn.style.padding = '3px 8px';
     deleteBtn.addEventListener('click', () => deleteBot(bot.id));
-    li.appendChild(deleteBtn);
+    btnGroup.appendChild(deleteBtn);
 
+    li.appendChild(btnGroup);
     ownedBotsList.appendChild(li);
   });
 }
 
 // Add a new bot
-function addBot() {
+function addBot(customName, customVariant) {
   const botInput = document.getElementById('bot-input');
   const variantSelect = document.getElementById('variant-select');
-  const botName = botInput.value.trim();
-  const selectedVariant = variantSelect.value;
+
+  const botName = (customName || botInput.value).trim();
+  const selectedVariant = customVariant || variantSelect.value;
 
   if (!botName) {
     alert('Please enter a bot name.');
     return;
   }
 
-  // Find canonical name if available in AllBots
+  // Canonical name if available in AllBots
   let canonicalName = botName;
   if (typeof data !== 'undefined' && data && data.AllBots) {
     const match = data.AllBots.find(b => b.toLowerCase() === botName.toLowerCase());
@@ -131,11 +179,32 @@ function addBot() {
   ownedBots.push(newBot);
   saveState();
   renderOwnedBots();
-  botInput.value = '';
-  botInput.focus();
+  if (!customName) {
+    botInput.value = '';
+    botInput.focus();
+  }
 
-  // Refresh advice if visible
+  // Refresh advice to update statuses
   generateAdvice();
+}
+
+// Pre-fill Add Bot form
+function selectBotForAdd(botName, variant) {
+  const botInput = document.getElementById('bot-input');
+  const variantSelect = document.getElementById('variant-select');
+  if (botInput) botInput.value = botName;
+  if (variantSelect && variant) variantSelect.value = variant;
+
+  // Open the Add Bot section if collapsed
+  const addSection = document.getElementById('add-bot-section');
+  if (addSection && addSection.classList.contains('collapsed')) {
+    addSection.classList.remove('collapsed');
+    const header = addSection.querySelector('.section-header');
+    if (header) header.setAttribute('aria-expanded', 'true');
+  }
+
+  botInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  botInput.focus();
 }
 
 // Mark bot sold / unsold
@@ -193,42 +262,45 @@ function checkIfNeeded() {
   }
 
   const targetBot = canonicalName.toLowerCase();
-  const variantIndex = data.Variants.findIndex(v => v.name.toLowerCase() === selectedVariant.toLowerCase());
+  const variantIndex = getVariantIndex(selectedVariant);
   const path = data.Paths.find(p => p['Path number'] === activePath.toString());
 
   let outputHtml = '';
 
   if (path) {
-    const maxNeededObj = (path.max_bot_variant_needed || []).find(b => b.type.toLowerCase() === targetBot);
+    const highestInfo = getHighestVariantForBot(path, targetBot);
     const neededRebirths = [];
     path.bots_per_rebirth.forEach(r => {
       const m = r.bots.find(b => b.type.toLowerCase() === targetBot);
       if (m) neededRebirths.push({ rebirth: r.Rebirth, variant: m.variant });
     });
 
-    if (maxNeededObj || neededRebirths.length > 0) {
-      const maxVariant = maxNeededObj ? maxNeededObj.variant : neededRebirths[neededRebirths.length - 1].variant;
-      const maxVarIdx = data.Variants.findIndex(v => v.name.toLowerCase() === maxVariant.toLowerCase());
+    if (neededRebirths.length > 0 || highestInfo.index >= 0) {
+      const maxVariant = highestInfo.variant;
+      const maxVarIdx = highestInfo.index;
 
       outputHtml += `<strong>Path ${path['Path number']}:</strong> ${canonicalName} <em>is needed</em>.<br>`;
-      outputHtml += `Max variant needed: <strong>${maxVariant}</strong>.<br>`;
-      outputHtml += `Rebirths required in: ${neededRebirths.map(nr => `${nr.rebirth} (${nr.variant})`).join(', ')}.<br>`;
+      outputHtml += `Highest variety needed: <strong>${maxVariant} (Index ${maxVarIdx})</strong>.<br>`;
+      if (neededRebirths.length > 0) {
+        outputHtml += `Rebirths required in: ${neededRebirths.map(nr => `${nr.rebirth} (${nr.variant})`).join(', ')}.<br>`;
+      }
 
       if (variantIndex < maxVarIdx) {
-        outputHtml += `<span style="color: #d97706;">Action: Keep and upgrade from ${selectedVariant} to ${maxVariant}.</span>`;
+        outputHtml += `<span style="color: #d97706;">Action: Keep and upgrade from ${selectedVariant} (Index ${variantIndex}) to ${maxVariant} (Index ${maxVarIdx}).</span>`;
       } else if (variantIndex === maxVarIdx) {
-        outputHtml += `<span style="color: #16a34a;">Action: Perfect! Current variant (${selectedVariant}) matches max needed (${maxVariant}). Do not upgrade higher.</span>`;
+        outputHtml += `<span style="color: #16a34a;">Action: Perfect! Current variant (${selectedVariant}) matches highest required (${maxVariant}). Do not upgrade higher.</span>`;
       } else {
-        outputHtml += `<span style="color: #dc2626;">Notice: Current variant (${selectedVariant}) is higher than required (${maxVariant}).</span>`;
+        outputHtml += `<span style="color: #dc2626;">Notice: Current variant (${selectedVariant}) is higher than highest required (${maxVariant}).</span>`;
       }
     } else {
       outputHtml += `<strong>Path ${path['Path number']}:</strong> <span style="color: #16a34a;">${canonicalName} is NOT needed for this path. Safe to sell!</span>`;
     }
   }
 
-  // Cross-path summary
+  // Cross-path check
   const otherPathsNeeded = data.Paths.filter(p => {
-    return (p.max_bot_variant_needed || []).some(b => b.type.toLowerCase() === targetBot);
+    return (p.max_bot_variant_needed || []).some(b => b.type.toLowerCase() === targetBot) ||
+           p.bots_per_rebirth.some(r => r.bots.some(b => b.type.toLowerCase() === targetBot));
   }).map(p => p['Path number']);
 
   if (otherPathsNeeded.length > 0) {
@@ -281,7 +353,6 @@ function predictPath() {
         }
       }
     } else {
-      // No rebirth specified: search any rebirth matching all provided bots
       const matchedStage = path.bots_per_rebirth.find(stage => {
         const stageBotNames = stage.bots.map(b => b.type.toLowerCase());
         return inputBots.every(inBot => stageBotNames.includes(inBot));
@@ -321,92 +392,283 @@ function predictPath() {
   }
 }
 
+// Find highest variant for bot in path
+function getHighestVariantForBot(path, botType) {
+  let highestIdx = -1;
+  let highestVariantName = 'Base';
+
+  // Check all rebirths in path
+  path.bots_per_rebirth.forEach(r => {
+    r.bots.forEach(b => {
+      if (b.type.toLowerCase() === botType.toLowerCase()) {
+        const idx = getVariantIndex(b.variant);
+        if (idx > highestIdx) {
+          highestIdx = idx;
+          highestVariantName = b.variant;
+        }
+      }
+    });
+  });
+
+  // Check max_bot_variant_needed from json
+  if (path.max_bot_variant_needed) {
+    const maxEntry = path.max_bot_variant_needed.find(b => b.type.toLowerCase() === botType.toLowerCase());
+    if (maxEntry) {
+      const idx = getVariantIndex(maxEntry.variant);
+      if (idx > highestIdx) {
+        highestIdx = idx;
+        highestVariantName = maxEntry.variant;
+      }
+    }
+  }
+
+  // Canonical name from Variants
+  if (highestIdx >= 0) {
+    highestVariantName = getVariantByIndex(highestIdx);
+  }
+
+  return { variant: highestVariantName, index: highestIdx };
+}
+
+// Extract bots from whole path in order
+function getPathBotsInOrder(pathNumber) {
+  const path = data.Paths.find(p => p['Path number'] === pathNumber.toString());
+  if (!path) return [];
+
+  const orderedBots = [];
+  const seen = new Set();
+
+  path.bots_per_rebirth.forEach(r => {
+    r.bots.forEach(b => {
+      const key = b.type.toLowerCase();
+      if (!seen.has(key)) {
+        seen.add(key);
+
+        const occurrences = [];
+        path.bots_per_rebirth.forEach(r2 => {
+          const match = r2.bots.find(b2 => b2.type.toLowerCase() === key);
+          if (match) {
+            occurrences.push({ rebirth: r2.Rebirth, variant: match.variant, index: getVariantIndex(match.variant) });
+          }
+        });
+
+        const highest = getHighestVariantForBot(path, b.type);
+
+        orderedBots.push({
+          botType: b.type,
+          firstRebirth: r.Rebirth,
+          highestVariant: highest.variant,
+          highestIndex: highest.index,
+          totalOccurrences: occurrences.length,
+          occurrences: occurrences
+        });
+      }
+    });
+  });
+
+  return orderedBots;
+}
+
+// Set advice filter
+function setAdviceFilter(filterName) {
+  currentAdviceFilter = filterName;
+  const filterBtns = document.querySelectorAll('#advice-filters .filter-btn');
+  filterBtns.forEach(btn => {
+    const match = btn.getAttribute('onclick')?.includes(`'${filterName}'`);
+    if (match) btn.classList.add('active');
+    else btn.classList.remove('active');
+  });
+  renderAdviceList();
+}
+
+// Whole Path Advice Cache
+let cachedPathAdviceItems = [];
+
 // Generate Advice
 function generateAdvice() {
+  const path = data.Paths.find(p => p['Path number'] === activePath.toString());
+  if (!path) return;
+
+  const orderedBots = getPathBotsInOrder(activePath);
+  const currentRebirthRaw = document.getElementById('current-rebirth')?.value.trim();
+  const normRebirth = normalizeRebirth(currentRebirthRaw);
+
+  let readyCount = 0;
+  let upgradeCount = 0;
+  let missingCount = 0;
+
+  cachedPathAdviceItems = orderedBots.map((item, index) => {
+    const owned = ownedBots.find(o => !o.sold && o.name.toLowerCase() === item.botType.toLowerCase());
+    let statusType = 'missing';
+    let statusText = '';
+    let ownedVariant = '';
+
+    if (!owned) {
+      statusType = 'missing';
+      statusText = `Missing: Need ${item.highestVariant}`;
+      missingCount++;
+    } else {
+      ownedVariant = owned.variant;
+      const ownedIdx = getVariantIndex(owned.variant);
+      if (ownedIdx >= item.highestIndex) {
+        statusType = 'ready';
+        statusText = `Ready (${owned.variant})`;
+        readyCount++;
+      } else {
+        statusType = 'upgrade';
+        statusText = `Upgrade needed: Own ${owned.variant} -> Need ${item.highestVariant}`;
+        upgradeCount++;
+      }
+    }
+
+    const isCurrentRebirth = normRebirth && item.occurrences.some(o => o.rebirth === normRebirth);
+
+    return {
+      order: index + 1,
+      botType: item.botType,
+      firstRebirth: item.firstRebirth,
+      highestVariant: item.highestVariant,
+      highestIndex: item.highestIndex,
+      occurrences: item.occurrences,
+      statusType,
+      statusText,
+      ownedVariant,
+      isCurrentRebirth
+    };
+  });
+
+  // Render Summary Box
+  const summaryBox = document.getElementById('advice-summary');
+  if (summaryBox) {
+    summaryBox.innerHTML = `
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <div>
+          <strong>Path ${activePath} Progression:</strong> 
+          <span>${orderedBots.length} bots needed in total across all 40 rebirths</span>
+          ${normRebirth ? `<br><small style="color: #d97706;">Highlighted bots are required for Current Rebirth (${normRebirth})</small>` : ''}
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <span class="badge" style="background-color: #dcfce7; color: #166534;">✅ ${readyCount} Ready</span>
+          <span class="badge" style="background-color: #fef3c7; color: #92400e;">⬆️ ${upgradeCount} Upgrade</span>
+          <span class="badge" style="background-color: #fee2e2; color: #991b1b;">❌ ${missingCount} Missing</span>
+        </div>
+      </div>
+      <div style="margin-top: 6px; font-size: 12px; color: #64748b;">
+        * For bots required in multiple rebirths, the variety recommended below is the <strong>highest index variant in the JSON</strong> (e.g. up to Kyber [index 7]).
+      </div>
+    `;
+  }
+
+  // Update Filter buttons text with counts
+  const filterBtns = document.querySelectorAll('#advice-filters .filter-btn');
+  if (filterBtns.length >= 4) {
+    filterBtns[0].textContent = `All Bots (${orderedBots.length})`;
+    filterBtns[1].textContent = `Missing (${missingCount})`;
+    filterBtns[2].textContent = `Needs Upgrade (${upgradeCount})`;
+    filterBtns[3].textContent = `Ready (${readyCount})`;
+  }
+
+  renderAdviceList();
+}
+
+function renderAdviceList() {
   const adviceList = document.getElementById('advice-list');
   if (!adviceList) return;
   adviceList.innerHTML = '';
 
-  const path = data.Paths.find(p => p['Path number'] === activePath.toString());
-  if (!path) return;
+  const filteredItems = cachedPathAdviceItems.filter(item => {
+    if (currentAdviceFilter === 'all') return true;
+    return item.statusType === currentAdviceFilter;
+  });
 
-  const currentRebirthRaw = document.getElementById('current-rebirth')?.value.trim();
-  const normRebirth = normalizeRebirth(currentRebirthRaw) || '0 > 1';
-  const currentRebirthNum = getRebirthStartNumber(normRebirth);
-  const currentStage = path.bots_per_rebirth.find(r => r.Rebirth === normRebirth);
-
-  // 1. Current Rebirth Requirements
-  if (currentStage) {
-    const headerLi = document.createElement('li');
-    headerLi.innerHTML = `<strong>Current Rebirth (${normRebirth}) Requirements for Path ${activePath}:</strong>`;
-    adviceList.appendChild(headerLi);
-
-    currentStage.bots.forEach(req => {
-      const owned = ownedBots.find(b => !b.sold && b.name.toLowerCase() === req.type.toLowerCase());
-      const li = document.createElement('li');
-      li.style.marginLeft = '20px';
-
-      if (!owned) {
-        li.innerHTML = `❌ Missing: <strong>${req.type}</strong> (${req.variant})`;
-        li.style.color = '#dc2626';
-      } else {
-        const ownedVarIdx = data.Variants.findIndex(v => v.name.toLowerCase() === owned.variant.toLowerCase());
-        const reqVarIdx = data.Variants.findIndex(v => v.name.toLowerCase() === req.variant.toLowerCase());
-        if (ownedVarIdx >= reqVarIdx) {
-          li.innerHTML = `✅ Ready: <strong>${req.type}</strong> (${owned.variant}) meets requirement (${req.variant})`;
-          li.style.color = '#16a34a';
-        } else {
-          li.innerHTML = `⚠️ Upgrade Needed: <strong>${req.type}</strong> is ${owned.variant}, needs <strong>${req.variant}</strong>`;
-          li.style.color = '#d97706';
-        }
-      }
-      adviceList.appendChild(li);
-    });
+  if (filteredItems.length === 0) {
+    const emptyLi = document.createElement('li');
+    emptyLi.style.padding = '12px';
+    emptyLi.style.textAlign = 'center';
+    emptyLi.style.color = '#64748b';
+    emptyLi.textContent = `No bots match the "${currentAdviceFilter}" filter for Path ${activePath}.`;
+    adviceList.appendChild(emptyLi);
+    return;
   }
 
-  // 2. Owned Bots Retention / Sell Advice
-  const activeOwned = ownedBots.filter(b => !b.sold);
-  if (activeOwned.length > 0) {
-    const adviceHeader = document.createElement('li');
-    adviceHeader.style.marginTop = '10px';
-    adviceHeader.innerHTML = `<strong>Owned Bots Strategy (Path ${activePath}):</strong>`;
-    adviceList.appendChild(adviceHeader);
+  filteredItems.forEach(item => {
+    const li = document.createElement('li');
+    li.className = `advice-card ${item.isCurrentRebirth ? 'highlight-rebirth' : ''}`;
 
-    activeOwned.forEach(owned => {
-      const botName = owned.name.toLowerCase();
-      const futureRebirths = path.bots_per_rebirth.filter(r => {
-        return getRebirthStartNumber(r.Rebirth) >= currentRebirthNum;
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'advice-info';
+
+    // Title line
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'advice-title';
+    titleDiv.innerHTML = `
+      <span style="color: #64748b; font-size: 13px;">#${item.order}</span>
+      <span>${item.botType}</span>
+      <span class="badge badge-variant">${item.highestVariant} (Index ${item.highestIndex})</span>
+      <span class="badge badge-rebirth">First: ${item.firstRebirth}</span>
+      ${item.isCurrentRebirth ? '<span class="badge badge-current-rebirth">Current Rebirth</span>' : ''}
+    `;
+    infoDiv.appendChild(titleDiv);
+
+    // Details line
+    const detailsDiv = document.createElement('div');
+    detailsDiv.className = 'advice-details';
+    const occStr = item.occurrences.map(o => `${o.rebirth} (${o.variant})`).join(', ');
+    detailsDiv.textContent = item.occurrences.length > 1 
+      ? `Required in ${item.occurrences.length} rebirths: ${occStr}` 
+      : `Required in: ${occStr}`;
+    infoDiv.appendChild(detailsDiv);
+
+    // Status line
+    const statusDiv = document.createElement('div');
+    statusDiv.style.marginTop = '4px';
+    const statusClass = item.statusType === 'ready' ? 'status-ready' : (item.statusType === 'upgrade' ? 'status-upgrade' : 'status-missing');
+    statusDiv.className = `advice-status ${statusClass}`;
+    statusDiv.textContent = item.statusText;
+    infoDiv.appendChild(statusDiv);
+
+    li.appendChild(infoDiv);
+
+    // Actions
+    const actionDiv = document.createElement('div');
+    actionDiv.style.display = 'flex';
+    actionDiv.style.gap = '6px';
+
+    if (item.statusType === 'missing') {
+      const addBtn = document.createElement('button');
+      addBtn.textContent = '+ Add to Owned';
+      addBtn.style.fontSize = '12px';
+      addBtn.style.padding = '4px 8px';
+      addBtn.addEventListener('click', () => {
+        addBot(item.botType, item.highestVariant);
       });
+      actionDiv.appendChild(addBtn);
 
-      const futureReqs = [];
-      futureRebirths.forEach(r => {
-        const m = r.bots.find(b => b.type.toLowerCase() === botName);
-        if (m) futureReqs.push({ rebirth: r.Rebirth, variant: m.variant });
+      const fillBtn = document.createElement('button');
+      fillBtn.textContent = 'Select in Form';
+      fillBtn.style.fontSize = '12px';
+      fillBtn.style.padding = '4px 8px';
+      fillBtn.style.backgroundColor = '#64748b';
+      fillBtn.addEventListener('click', () => {
+        selectBotForAdd(item.botType, item.highestVariant);
       });
+      actionDiv.appendChild(fillBtn);
+    } else if (item.statusType === 'upgrade') {
+      const upgradeActionBtn = document.createElement('button');
+      upgradeActionBtn.textContent = 'Upgrade Owned';
+      upgradeActionBtn.style.fontSize = '12px';
+      upgradeActionBtn.style.padding = '4px 8px';
+      upgradeActionBtn.style.backgroundColor = '#d97706';
+      upgradeActionBtn.addEventListener('click', () => {
+        const owned = ownedBots.find(o => !o.sold && o.name.toLowerCase() === item.botType.toLowerCase());
+        if (owned) upgradeBot(owned.id);
+      });
+      actionDiv.appendChild(upgradeActionBtn);
+    }
 
-      const maxNeededObj = (path.max_bot_variant_needed || []).find(b => b.type.toLowerCase() === botName);
-      const li = document.createElement('li');
-      li.style.marginLeft = '20px';
-
-      if (futureReqs.length === 0) {
-        li.innerHTML = `💰 <strong>${owned.name}</strong> (${owned.variant}): Safe to sell! Not needed for any remaining rebirth in Path ${activePath}.`;
-        li.style.color = '#16a34a';
-      } else {
-        const maxVariant = maxNeededObj ? maxNeededObj.variant : futureReqs[futureReqs.length - 1].variant;
-        const ownedVarIdx = data.Variants.findIndex(v => v.name.toLowerCase() === owned.variant.toLowerCase());
-        const maxVarIdx = data.Variants.findIndex(v => v.name.toLowerCase() === maxVariant.toLowerCase());
-
-        if (ownedVarIdx < maxVarIdx) {
-          li.innerHTML = `⬆️ Keep & Upgrade <strong>${owned.name}</strong>: Currently ${owned.variant}, max needed is <strong>${maxVariant}</strong> (next in ${futureReqs[0].rebirth} as ${futureReqs[0].variant}).`;
-          li.style.color = '#d97706';
-        } else {
-          li.innerHTML = `🛡️ Keep <strong>${owned.name}</strong> (${owned.variant}): Ready for future rebirth (next in ${futureReqs[0].rebirth}).`;
-          li.style.color = '#2563eb';
-        }
-      }
-      adviceList.appendChild(li);
-    });
-  }
+    li.appendChild(actionDiv);
+    adviceList.appendChild(li);
+  });
 }
 
 // Global initialization
@@ -420,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
     variants.forEach(variant => {
       const option = document.createElement('option');
       option.value = variant.name;
-      option.textContent = variant.name;
+      option.textContent = `${variant.name} (Index ${variant.index})`;
       variantSelect.appendChild(option);
     });
   }
@@ -466,11 +728,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Delegated event listener for collapsible sections
+  document.addEventListener('click', (e) => {
+    const header = e.target.closest('.section-header');
+    if (!header) return;
+    if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
+    toggleSection(header);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      const header = e.target.closest('.section-header');
+      if (header && document.activeElement === header) {
+        e.preventDefault();
+        toggleSection(header);
+      }
+    }
+  });
+
   renderOwnedBots();
   generateAdvice();
 });
 
-// Explicitly bind to window for inline onclick handlers
+// Explicitly bind to window for inline HTML onclick handlers
 window.addBot = addBot;
 window.checkIfNeeded = checkIfNeeded;
 window.predictPath = predictPath;
@@ -478,3 +758,5 @@ window.markSold = markSold;
 window.upgradeBot = upgradeBot;
 window.deleteBot = deleteBot;
 window.generateAdvice = generateAdvice;
+window.setAdviceFilter = setAdviceFilter;
+window.selectBotForAdd = selectBotForAdd;
