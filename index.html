@@ -3,38 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Companion App</title>
+    <title>Star Wars Drone Tycoon - Helper</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.5;
+            color: #333;
+        }
+        h1 {
+            color: #1e293b;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
         }
         .section {
             margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #f8fafc;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #0f172a;
+        }
+        input, select, button {
+            padding: 6px 10px;
+            margin: 4px 2px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #0284c7;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0369a1;
+        }
+        button:disabled {
+            background-color: #94a3b8;
+            cursor: not-allowed;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .result-box {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #ffffff;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
         }
     </style>
 </head>
 <body>
-    <h1>Bot Companion App</h1>
-    
-    <div class="section" id="add-bot-section">
-        <h2>Add Bot</h2>
-        <input type="text" id="bot-input" placeholder="Enter bot name">
-        <select id="variant-select"></select>
-        <button onclick="addBot()">Add</button>
-        <button onclick="checkIfNeeded()">Check if Needed</button>
-    </div>
+    <h1>Star Wars Drone Tycoon Companion App</h1>
+
+    <!-- Datalist for 52 bot names autocomplete -->
+    <datalist id="bots-datalist"></datalist>
 
     <div class="section" id="path-predictor-section">
-        <h2>Path Predictor</h2>
-        <input type="number" id="current-rebirth" placeholder="Current Rebirth">
-        <input type="text" id="bot1" placeholder="Bot 1">
-        <input type="text" id="bot2" placeholder="Bot 2">
-        <input type="text" id="bot3" placeholder="Bot 3">
+        <h2>Path Predictor & Settings</h2>
+        <p>Enter your current rebirth and the bots required by the game to determine your Path (1 to 5):</p>
+        <input type="text" id="current-rebirth" placeholder="Current Rebirth (e.g. 0, 1, or 0 > 1)">
+        <input type="text" id="bot1" list="bots-datalist" placeholder="Bot 1 (e.g. CB)">
+        <input type="text" id="bot2" list="bots-datalist" placeholder="Bot 2 (e.g. Pit)">
+        <input type="text" id="bot3" list="bots-datalist" placeholder="Bot 3 (e.g. DRK-1 Probe)">
         <button onclick="predictPath()">Predict Path</button>
+        <div id="prediction-result" class="result-box">No path predicted yet. Enter bots above or select your path below.</div>
+
+        <p style="margin-top: 14px; margin-bottom: 0;">
+            <label for="active-path-select"><strong>Active Path:</strong></label>
+            <select id="active-path-select">
+                <option value="1">Path 1</option>
+                <option value="2">Path 2</option>
+                <option value="3">Path 3</option>
+                <option value="4">Path 4</option>
+                <option value="5">Path 5</option>
+            </select>
+            <small style="color: #64748b;">(Used for checking bots and generating rebirth advice)</small>
+        </p>
+    </div>
+
+    <div class="section" id="add-bot-section">
+        <h2>Add Bot / Check Status</h2>
+        <input type="text" id="bot-input" list="bots-datalist" placeholder="Enter bot name (e.g. R9)">
+        <select id="variant-select"></select>
+        <button onclick="addBot()">Add to Owned</button>
+        <button onclick="checkIfNeeded()">Check if Needed</button>
+        <div id="check-needed-result" class="result-box">Enter a bot above and click "Check if Needed" to see if it is required for your path or safe to sell.</div>
     </div>
 
     <div class="section" id="owned-bots-section">
@@ -43,12 +108,15 @@
     </div>
 
     <div class="section" id="advice-section">
-        <h2>Advice</h2>
-        <ul id="advice-list"></ul>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="margin: 0;">Rebirth & Strategy Advice</h2>
+            <button onclick="generateAdvice()">Refresh Advice</button>
+        </div>
+        <ul id="advice-list" style="margin-top: 12px;"></ul>
     </div>
 
+    <!-- Scripts loaded at end of body -->
     <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
-```
