@@ -12,32 +12,42 @@
     <!-- Datalist for 52 bot names autocomplete -->
     <datalist id="bots-datalist"></datalist>
 
-    <!-- Section 1: Path Predictor -->
+    <!-- Section 1: Rebirth & Path Settings -->
     <div class="section" id="path-predictor-section">
         <div class="section-header" tabindex="0" role="button" aria-expanded="true">
-            <h2>Path Predictor & Settings</h2>
+            <h2>Rebirth & Path Settings</h2>
             <span class="collapse-arrow">&#9662;</span>
         </div>
         <div class="section-body">
-            <p>Enter your current rebirth and the bots required by the game to determine your Path (1 to 5):</p>
-            <input type="text" id="current-rebirth" placeholder="Current Rebirth (e.g. 0, 1, or 0 > 1)">
-            <input type="text" id="bot1" list="bots-datalist" placeholder="Bot 1 (e.g. CB)">
-            <input type="text" id="bot2" list="bots-datalist" placeholder="Bot 2 (e.g. Pit)">
-            <input type="text" id="bot3" list="bots-datalist" placeholder="Bot 3 (e.g. DRK-1 Probe)">
-            <button onclick="predictPath()">Predict Path</button>
-            <div id="prediction-result" class="result-box">No path predicted yet. Enter bots above or select your path below.</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+                <div>
+                    <label for="current-rebirth"><strong>Current Rebirth:</strong></label>
+                    <input type="text" id="current-rebirth" placeholder="e.g. 0, 1, or 0 > 1" style="width: 100%; box-sizing: border-box; margin-top: 4px;">
+                    <small class="text-muted">Used for highlighting current step requirements.</small>
+                </div>
+                <div>
+                    <label for="active-path-select"><strong>Active Path:</strong></label>
+                    <select id="active-path-select" style="width: 100%; box-sizing: border-box; margin-top: 4px;">
+                        <option value="1">Path 1</option>
+                        <option value="2">Path 2</option>
+                        <option value="3">Path 3</option>
+                        <option value="4">Path 4</option>
+                        <option value="5">Path 5</option>
+                    </select>
+                    <small class="text-muted">Used for checking bots and generating path advice.</small>
+                </div>
+            </div>
 
-            <p style="margin-top: 14px; margin-bottom: 0;">
-                <label for="active-path-select"><strong>Active Path:</strong></label>
-                <select id="active-path-select">
-                    <option value="1">Path 1</option>
-                    <option value="2">Path 2</option>
-                    <option value="3">Path 3</option>
-                    <option value="4">Path 4</option>
-                    <option value="5">Path 5</option>
-                </select>
-                <small class="text-muted">(Used for checking bots and generating whole path advice)</small>
-            </p>
+            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 14px 0;">
+
+            <p style="margin-top: 0; margin-bottom: 6px;"><strong>Path Predictor (Optional):</strong> Enter the bots required by the game to automatically detect your Path:</p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <input type="text" id="bot1" list="bots-datalist" placeholder="Bot 1 (e.g. CB)" style="flex: 1; min-width: 120px;">
+                <input type="text" id="bot2" list="bots-datalist" placeholder="Bot 2 (e.g. Pit)" style="flex: 1; min-width: 120px;">
+                <input type="text" id="bot3" list="bots-datalist" placeholder="Bot 3 (e.g. DRK-1 Probe)" style="flex: 1; min-width: 120px;">
+                <button onclick="predictPath()">Predict Path</button>
+            </div>
+            <div id="prediction-result" class="result-box" style="margin-top: 10px;">No path predicted yet. Enter bots above or select your path directly from the dropdown above.</div>
         </div>
     </div>
 
@@ -63,6 +73,14 @@
             <span class="collapse-arrow">&#9662;</span>
         </div>
         <div class="section-body">
+                        <div class="legend-box" id="owned-bots-legend">
+                <div style="font-weight: bold; margin-bottom: 6px; color: #0f172a;">Legend:</div>
+                <div style="display: flex; flex-direction: column; gap: 5px; font-size: 13px;">
+                    <div><span>✅</span> <strong>Ready:</strong> You own the bot at or above the highest required variant.</div>
+                    <div><span>⬆️</span> <strong>Needs Upgrade:</strong> You own the bot, but at a lower variant than required.</div>
+                    <div><span>💰</span> <strong>Sellable:</strong> Not needed for future rebirths.</div>
+                </div>
+            </div>
             <ul id="owned-bots-list" style="padding-left: 0; list-style: none;"></ul>
         </div>
     </div>
@@ -83,6 +101,15 @@
                 <button class="filter-btn" onclick="setAdviceFilter('missing')">Missing</button>
                 <button class="filter-btn" onclick="setAdviceFilter('upgrade')">Needs Upgrade</button>
                 <button class="filter-btn" onclick="setAdviceFilter('ready')">Ready</button>
+            </div>
+                        <div class="legend-box" id="advice-legend">
+                <div style="font-weight: bold; margin-bottom: 6px; color: #0f172a;">Legend:</div>
+                <div style="display: flex; flex-direction: column; gap: 5px; font-size: 13px;">
+                    <div><span>✅</span> <strong>Ready:</strong> You own the bot at or above the highest required variant.</div>
+                    <div><span>⬆️</span> <strong>Needs Upgrade:</strong> You own the bot, but at a lower variant than required.</div>
+                    <div><span>💰</span> <strong>Sellable:</strong> Not needed for future rebirths.</div>
+                    <div><span>❌</span> <strong>Missing:</strong> You do not own this bot yet.</div>
+                </div>
             </div>
             <ul id="advice-list" style="padding-left: 0; list-style: none; margin-top: 10px;"></ul>
         </div>

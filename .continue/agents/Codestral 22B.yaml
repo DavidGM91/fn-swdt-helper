@@ -1,0 +1,40 @@
+name: Codestral Complete Setup
+version: 0.0.1
+schema: v1
+
+models:
+  # Modelo principal para Razonamiento y Edición
+  - name: Codestral Chat
+    provider: lmstudio
+    model: codestral-22b-v0.1
+    contextLength: 12288
+    roles:
+      - chat
+      - edit
+      - apply
+  
+  # Modelo ultrarrápido para Autocompletado
+  - name: Codestral Autocomplete
+    provider: lmstudio
+    model: codestral-22b-v0.1
+    contextLength: 4096
+    roles:
+      - autocomplete
+    autocompleteOptions:
+      multilineCompletions: always
+      transform: false
+      useFileSuffix: true
+
+  # Modelo local especializado para Indexar tu Repositorio (@codebase)
+  - name: Nomic Embed Code
+    provider: lmstudio         # O usa 'ollama' / 'transformers.js' integrado por defecto
+    model: nomic-embed-text    # Modelo diminuto y optimizado para vectores
+    roles:
+      - embed
+
+  # Modelo local especializado para filtrar el contexto de forma precisa
+  - name: Llama Ranker
+    provider: lmstudio
+    model: bge-reranker-large  # Un modelo Reranker estándar de la industria
+    roles:
+      - rerank

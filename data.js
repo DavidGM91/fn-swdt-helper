@@ -1,38 +1,5 @@
 const data = {
-  "Variants": [
-    {
-      "name": "Base",
-      "index": "0"
-    },
-    {
-      "name": "Gold",
-      "index": "1"
-    },
-    {
-      "name": "Diamond",
-      "index": "2"
-    },
-    {
-      "name": "Rainbow",
-      "index": "3"
-    },
-    {
-      "name": "Beskar",
-      "index": "4"
-    },
-    {
-      "name": "Galactic",
-      "index": "5"
-    },
-    {
-      "name": "Stellar",
-      "index": "6"
-    },
-    {
-      "name": "Kyber",
-      "index": "7"
-    }
-  ],
+  "Variants": ["Base","Gold","Diamond","Rainbow","Beskar","Galactic","Stellar","Kyber"],
   "Paths": [
     {
       "Path number": "1",

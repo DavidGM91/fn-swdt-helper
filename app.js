@@ -1,21 +1,40 @@
 // Star Wars Drone Tycoon Companion App
 
 // State
+// State
 let ownedBots = [];
-let activePath = '1';
+let activePath = 1;
 let currentAdviceFilter = 'all';
+
+// UI Cache
+const UI = {
+  ownedBotsList: document.getElementById('owned-bots-list'),
+  ownedCount: document.getElementById('owned-count'),
+  botInput: document.getElementById('bot-input'),
+  variantSelect: document.getElementById('variant-select'),
+  checkNeededResult: document.getElementById('check-needed-result'),
+  currentRebirth: document.getElementById('current-rebirth'),
+  activePathSelect: document.getElementById('active-path-select'),
+  bot1: document.getElementById('bot1'),
+  bot2: document.getElementById('bot2'),
+  bot3: document.getElementById('bot3'),
+  predictionResult: document.getElementById('prediction-result'),
+  adviceSummary: document.getElementById('advice-summary'),
+  adviceFilters: document.getElementById('advice-filters'),
+  adviceList: document.getElementById('advice-list'),
+  addSection: document.getElementById('add-bot-section')
+};
 
 // Helpers
 function getVariantIndex(variantName) {
   if (!variantName || typeof data === 'undefined' || !data.Variants) return 0;
-  const v = data.Variants.find(item => item.name.toLowerCase() === variantName.toLowerCase());
-  return v ? parseInt(v.index, 10) : 0;
+  const index = data.Variants.findIndex(item => item.toLowerCase() === variantName.toLowerCase());
+  return index !== -1 ? index : 0;
 }
 
 function getVariantByIndex(idx) {
   if (typeof data === 'undefined' || !data.Variants) return 'Base';
-  const v = data.Variants.find(item => parseInt(item.index, 10) === idx);
-  return v ? v.name : 'Base';
+  return data.Variants[idx] ? data.Variants[idx] : 'Base';
 }
 
 function normalizeRebirth(input) {
@@ -74,78 +93,112 @@ function toggleSection(headerEl) {
 
 // Render owned bots list
 function renderOwnedBots() {
-  const ownedBotsList = document.getElementById('owned-bots-list');
-  const countEl = document.getElementById('owned-count');
-  if (!ownedBotsList) return;
-  ownedBotsList.innerHTML = '';
+  if (!UI.ownedBotsList) return;
+  UI.ownedBotsList.innerHTML = '';
 
   const activeCount = ownedBots.filter(b => !b.sold).length;
-  if (countEl) countEl.textContent = `${activeCount}`;
+  if (UI.ownedCount) UI.ownedCount.textContent = `${activeCount}`;
 
   if (ownedBots.length === 0) {
     const emptyLi = document.createElement('li');
-    emptyLi.style.color = '#888';
-    emptyLi.style.padding = '8px 0';
+    emptyLi.className = 'empty-owned-bot';
     emptyLi.textContent = 'No bots added yet. Add a bot above or click "+ Add" on needed path bots below!';
-    ownedBotsList.appendChild(emptyLi);
+    UI.ownedBotsList.appendChild(emptyLi);
     return;
   }
 
+  // Pre-calculate redundancy
+  const maxVariantIndices = {};
+  ownedBots.forEach(bot => {
+    const name = bot.name.toLowerCase();
+    const idx = getVariantIndex(bot.variant);
+    if (!maxVariantIndices[name] || idx > maxVariantIndices[name]) {
+      maxVariantIndices[name] = idx;
+    }
+  });
+
+  const countsAtMax = {}; // name -> count of how many we've seen at maxIdx
+  const redundancyStatus = new Map(); // id -> boolean (true if redundant)
+
+  ownedBots.forEach(bot => {
+    const name = bot.name.toLowerCase();
+    const idx = getVariantIndex(bot.variant);
+    const maxIdx = maxVariantIndices[name];
+
+    if (idx < maxIdx) {
+      redundancyStatus.set(bot.id, true);
+    } else if (idx === maxIdx) {
+      countsAtMax[name] = (countsAtMax[name] || 0) + 1;
+      redundancyStatus.set(bot.id, countsAtMax[name] > 1);
+    } else {
+      redundancyStatus.set(bot.id, false);
+    }
+  });
+
   ownedBots.forEach((bot) => {
     const li = document.createElement('li');
-    li.style.marginBottom = '8px';
-    li.style.padding = '6px 10px';
-    li.style.background = '#ffffff';
-    li.style.borderRadius = '4px';
-    li.style.border = '1px solid #e2e8f0';
-    li.style.display = 'flex';
-    li.style.justifyContent = 'space-between';
-    li.style.alignItems = 'center';
-    li.style.flexWrap = 'wrap';
-    li.style.gap = '6px';
+    li.className = 'owned-bot-item';
 
-    if (bot.sold) {
-      li.style.textDecoration = 'line-through';
-      li.style.color = '#94a3b8';
-      li.style.backgroundColor = '#f1f5f9';
+    // Calculate status for Owned Bots relative to active path
+    let emoji = '';
+    let statusText = '';
+    
+    const path = data.Paths.find(p => p['Path number'] === activePath.toString());
+    if (path) {
+      const highestInfo = getHighestVariantForBot(path, bot.name.toLowerCase());
+      const ownedIdx = getVariantIndex(bot.variant);
+      const highestIdx = highestInfo.index;
+
+      // Get normalized current rebirth from the input field
+      const currentRebirthRaw = document.getElementById('current-rebirth')?.value.trim();
+      const normRebirthVal = normalizeRebirth(currentRebirthRaw);
+
+      // Check if needed in current or future rebirths of this path
+      let isNeededInFuture = true;
+      if (normRebirthVal) {
+        const currentStartNum = getRebirthStartNumber(normRebirthVal);
+        if (currentStartNum !== -1) {
+          isNeededInFuture = false;
+          for (const r of path.bots_per_rebirth) {
+            const rebirthStartNum = getRebirthStartNumber(r.Rebirth);
+            if (rebirthStartNum !== -1 && rebirthStartNum >= currentStartNum) {
+              if (r.bots.some(b => b.type.toLowerCase() === bot.name.toLowerCase())) {
+                isNeededInFuture = true;
+                break;
+              }
+            }
+          }
+        }
+      }
+
+      // Note: We ignore max_bot_variant_needed here because we want to mark bots as sellable 
+      // if they are no longer required in the progression milestones of the current path.
+
+
+      // Determine emoji based on redundancy or requirements
+      if (redundancyStatus.get(bot.id)) {
+        emoji = '💰'; // Redundant - can be sold
+      } else if (!isNeededInFuture) {
+        emoji = '💰'; // Not needed in this path anymore - can be sold
+      } else if (ownedIdx >= highestIdx) {
+        emoji = '✅'; // Needed and owned at sufficient variant
+      } else if (ownedIdx !== undefined && ownedIdx < highestIdx) {
+        emoji = '⬆️'; // Needed but lower variant than required
+      }
     }
 
-    const textSpan = document.createElement('span');
-    textSpan.innerHTML = `<strong>${bot.name}</strong> <span class="badge badge-variant">${bot.variant}</span>`;
-    li.appendChild(textSpan);
+    li.innerHTML = `
+      <span><strong class="bot-name">${emoji} ${bot.name}</strong> <span class="badge badge-variant">${bot.variant}</span></span>
+      <div class="btn-group">
+        <button class="btn-sold" data-id="${bot.id}">Sold</button>
+        <button class="btn-upgrade" data-id="${bot.id}">Upgraded</button>
+      </div>
+    `;
 
-    const btnGroup = document.createElement('div');
-
-    // Sold button
-    const soldBtn = document.createElement('button');
-    soldBtn.textContent = bot.sold ? 'Unsold' : 'Mark Sold';
-    soldBtn.style.marginRight = '5px';
-    soldBtn.style.fontSize = '12px';
-    soldBtn.style.padding = '3px 8px';
-    soldBtn.addEventListener('click', () => markSold(bot.id));
-    btnGroup.appendChild(soldBtn);
-
-    // Upgrade button
-    const upgradeBtn = document.createElement('button');
-    upgradeBtn.textContent = 'Upgrade';
-    upgradeBtn.style.marginRight = '5px';
-    upgradeBtn.style.fontSize = '12px';
-    upgradeBtn.style.padding = '3px 8px';
-    upgradeBtn.disabled = bot.sold;
-    upgradeBtn.addEventListener('click', () => upgradeBot(bot.id));
-    btnGroup.appendChild(upgradeBtn);
-
-    // Delete button
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Remove';
-    deleteBtn.style.backgroundColor = '#ef4444';
-    deleteBtn.style.fontSize = '12px';
-    deleteBtn.style.padding = '3px 8px';
-    deleteBtn.addEventListener('click', () => deleteBot(bot.id));
-    btnGroup.appendChild(deleteBtn);
-
-    li.appendChild(btnGroup);
-    ownedBotsList.appendChild(li);
+    li.querySelector('.btn-sold').addEventListener('click', () => markSold(bot.id));
+    li.querySelector('.btn-upgrade').addEventListener('click', () => upgradeBot(bot.id));
+    
+    UI.ownedBotsList.appendChild(li);
   });
 }
 
@@ -173,7 +226,6 @@ function addBot(customName, customVariant) {
     id: Date.now().toString() + Math.random().toString(36).substring(2, 6),
     name: canonicalName,
     variant: selectedVariant,
-    sold: false
   };
 
   ownedBots.push(newBot);
@@ -209,24 +261,39 @@ function selectBotForAdd(botName, variant) {
 
 // Mark bot sold / unsold
 function markSold(botId) {
-  const bot = ownedBots.find(b => b.id === botId);
-  if (bot) {
-    bot.sold = !bot.sold;
+    ownedBots = ownedBots.filter(b => b.id !== botId);
     saveState();
     renderOwnedBots();
     generateAdvice();
-  }
 }
 
 // Upgrade bot to next variant
 function upgradeBot(botId) {
   const bot = ownedBots.find(b => b.id === botId);
-  if (!bot) return;
+  if (!bot || !bot.variant) {
+    console.error('Bot or variant not found for ID:', botId);
+    return;
+  }
 
   const variants = data.Variants;
-  const currentVariantIndex = variants.findIndex(v => v.name.toLowerCase() === bot.variant.toLowerCase());
+  if (!variants || !Array.isArray(variants)) {
+    console.error('No variants defined in data.');
+    return;
+  }
+
+  // Helper to extract name from variant (handles string or object with .name)
+  const getVName = (v) => (typeof v === 'string' ? v : (v && v.name ? v.name : null));
+
+  let currentVariantIndex = -1;
+  for (let i = 0; i < variants.length; i++) {
+    if (getVName(variants[i]) && getVName(variants[i]).toLowerCase() === bot.variant.toLowerCase()) {
+      currentVariantIndex = i;
+      break;
+    }
+  }
+
   if (currentVariantIndex >= 0 && currentVariantIndex < variants.length - 1) {
-    bot.variant = variants[currentVariantIndex + 1].name;
+    bot.variant = getVName(variants[currentVariantIndex + 1]);
     saveState();
     renderOwnedBots();
     generateAdvice();
@@ -235,19 +302,13 @@ function upgradeBot(botId) {
   }
 }
 
-// Delete bot
-function deleteBot(botId) {
-  ownedBots = ownedBots.filter(b => b.id !== botId);
-  saveState();
-  renderOwnedBots();
-  generateAdvice();
-}
 
 // Check if a bot is needed
 function checkIfNeeded() {
   const botInput = document.getElementById('bot-input').value.trim();
   const selectedVariant = document.getElementById('variant-select').value;
   const resultDiv = document.getElementById('check-needed-result');
+  const currentRebirth = document.getElementById('current-rebirth').value;
 
   if (!botInput) {
     if (resultDiv) resultDiv.textContent = 'Please enter a bot name to check.';
@@ -263,7 +324,7 @@ function checkIfNeeded() {
 
   const targetBot = canonicalName.toLowerCase();
   const variantIndex = getVariantIndex(selectedVariant);
-  const path = data.Paths.find(p => p['Path number'] === activePath.toString());
+  const path = data.Paths[activePath - 1];
 
   let outputHtml = '';
 
@@ -272,10 +333,14 @@ function checkIfNeeded() {
     const neededRebirths = [];
     path.bots_per_rebirth.forEach(r => {
       const m = r.bots.find(b => b.type.toLowerCase() === targetBot);
-      if (m) neededRebirths.push({ rebirth: r.Rebirth, variant: m.variant });
+      //TODO: Make sure it's only added for rebirths after or exactly the current one
+      if (m) {
+        const botRebirth = r.Rebirth.split('>')[0];
+        if (+botRebirth > +currentRebirth) { neededRebirths.push({ rebirth: r.Rebirth, variant: m.variant }); }
+      }
     });
 
-    if (neededRebirths.length > 0 || highestInfo.index >= 0) {
+    if (neededRebirths.length > 0) {
       const maxVariant = highestInfo.variant;
       const maxVarIdx = highestInfo.index;
 
@@ -285,15 +350,30 @@ function checkIfNeeded() {
         outputHtml += `Rebirths required in: ${neededRebirths.map(nr => `${nr.rebirth} (${nr.variant})`).join(', ')}.<br>`;
       }
 
-      if (variantIndex < maxVarIdx) {
-        outputHtml += `<span style="color: #d97706;">Action: Keep and upgrade from ${selectedVariant} (Index ${variantIndex}) to ${maxVariant} (Index ${maxVarIdx}).</span>`;
+      const ownedBot = ownedBots.find(b => b.name === canonicalName);
+      if (ownedBot) {
+        outputHtml += `<span class="status-warning">Warning: You already own this bot.</span><br>`;
+
+        const ownedVariantName = ownedBot.variant || "Unknown Variant";
+        const ownedVariantIdx = getVariantIndex(ownedBot.variant);
+
+        if (ownedVariantIdx !== undefined && ownedVariantIdx < variantIndex)
+        {
+        }
+        else
+        {
+          outputHtml += `<span class="status-error">Action: Do <strong>NOT</strong> buy! This bot is ${selectedVariant} with is lower or equal than ${ownedBot.variant} of your owned bot.</span>`;
+        }
+      }
+      else if (variantIndex < maxVarIdx) {
+        outputHtml += `<span class="status-warning">Action: Buy it and upgrade from ${selectedVariant} (Index ${variantIndex}) to ${maxVariant} (Index ${maxVarIdx}).</span>`;
       } else if (variantIndex === maxVarIdx) {
-        outputHtml += `<span style="color: #16a34a;">Action: Perfect! Current variant (${selectedVariant}) matches highest required (${maxVariant}). Do not upgrade higher.</span>`;
+        outputHtml += `<span class="status-success">Action: Buy it! Current variant (${selectedVariant}) matches highest required (${maxVariant}). No need to upgrade higher.</span>`;
       } else {
-        outputHtml += `<span style="color: #dc2626;">Notice: Current variant (${selectedVariant}) is higher than highest required (${maxVariant}).</span>`;
+        outputHtml += `<span class="status-success">Action: Buy it! Current variant (${selectedVariant}) is higher than highest required (${maxVariant}).</span>`;
       }
     } else {
-      outputHtml += `<strong>Path ${path['Path number']}:</strong> <span style="color: #16a34a;">${canonicalName} is NOT needed for this path. Safe to sell!</span>`;
+      outputHtml += `<span class="status-critical">Action: Do <strong>NOT</strong> buy! ${canonicalName} is NOT needed forward for this path!</span>`;
     }
   }
 
@@ -304,9 +384,9 @@ function checkIfNeeded() {
   }).map(p => p['Path number']);
 
   if (otherPathsNeeded.length > 0) {
-    outputHtml += `<br><small style="color: #666;">(Needed in Paths: ${otherPathsNeeded.join(', ')})</small>`;
+    outputHtml += `<br><small class="text-muted">(Needed in Paths: ${otherPathsNeeded.join(', ')} you could gift it to someone.)</small>`;
   } else {
-    outputHtml += `<br><small style="color: #666;">(Not needed in any path)</small>`;
+    outputHtml += `<br><small class="text-muted">(Not needed in any path)</small>`;
   }
 
   if (resultDiv) {
@@ -397,36 +477,30 @@ function getHighestVariantForBot(path, botType) {
   let highestIdx = -1;
   let highestVariantName = 'Base';
 
-  // Check all rebirths in path
-  path.bots_per_rebirth.forEach(r => {
-    r.bots.forEach(b => {
-      if (b.type.toLowerCase() === botType.toLowerCase()) {
-        const idx = getVariantIndex(b.variant);
-        if (idx > highestIdx) {
-          highestIdx = idx;
-          highestVariantName = b.variant;
-        }
-      }
-    });
-  });
-
   // Check max_bot_variant_needed from json
   if (path.max_bot_variant_needed) {
     const maxEntry = path.max_bot_variant_needed.find(b => b.type.toLowerCase() === botType.toLowerCase());
     if (maxEntry) {
-      const idx = getVariantIndex(maxEntry.variant);
-      if (idx > highestIdx) {
-        highestIdx = idx;
-        highestVariantName = maxEntry.variant;
-      }
+      highestIdx = getVariantIndex(maxEntry.variant);
+    }
+    else
+    {
+      // Check all rebirths in path
+      path.bots_per_rebirth.forEach(r => {
+        r.bots.forEach(b => {
+          if (b.type.toLowerCase() === botType.toLowerCase()) {
+            const idx = getVariantIndex(b.variant);
+            if (idx > highestIdx) {
+              highestIdx = idx;
+            }
+          }
+        });
+      });
     }
   }
 
-  // Canonical name from Variants
-  if (highestIdx >= 0) {
-    highestVariantName = getVariantByIndex(highestIdx);
-  }
-
+  highestVariantName = getVariantByIndex(highestIdx);
+  
   return { variant: highestVariantName, index: highestIdx };
 }
 
@@ -493,11 +567,24 @@ function generateAdvice() {
   const currentRebirthRaw = document.getElementById('current-rebirth')?.value.trim();
   const normRebirth = normalizeRebirth(currentRebirthRaw);
 
+  let filteredBots = orderedBots;
+  if (normRebirth) {
+    const currentStartNum = getRebirthStartNumber(normRebirth);
+    if (currentStartNum !== -1) {
+      filteredBots = orderedBots.filter(bot => 
+        bot.occurrences.some(occ => {
+          const startNum = getRebirthStartNumber(occ.rebirth);
+          return startNum !== -1 && startNum >= currentStartNum;
+        })
+      );
+    }
+  }
+
   let readyCount = 0;
   let upgradeCount = 0;
   let missingCount = 0;
 
-  cachedPathAdviceItems = orderedBots.map((item, index) => {
+  cachedPathAdviceItems = filteredBots.map((item, index) => {
     const owned = ownedBots.find(o => !o.sold && o.name.toLowerCase() === item.botType.toLowerCase());
     let statusType = 'missing';
     let statusText = '';
@@ -571,6 +658,15 @@ function generateAdvice() {
   renderAdviceList();
 }
 
+function getEmoji(status) {
+  switch (status) {
+    case 'ready': return '✅';
+    case 'upgrade': return '⬆️';
+    case 'missing': return '❌';
+    default: return '';
+  }
+}
+
 function renderAdviceList() {
   const adviceList = document.getElementById('advice-list');
   if (!adviceList) return;
@@ -603,7 +699,7 @@ function renderAdviceList() {
     titleDiv.className = 'advice-title';
     titleDiv.innerHTML = `
       <span style="color: #64748b; font-size: 13px;">#${item.order}</span>
-      <span>${item.botType}</span>
+      <span>${getEmoji(item.statusType)} ${item.botType}</span>
       <span class="badge badge-variant">${item.highestVariant} (Index ${item.highestIndex})</span>
       <span class="badge badge-rebirth">First: ${item.firstRebirth}</span>
       ${item.isCurrentRebirth ? '<span class="badge badge-current-rebirth">Current Rebirth</span>' : ''}
@@ -675,14 +771,15 @@ function renderAdviceList() {
 document.addEventListener('DOMContentLoaded', () => {
   loadState();
 
+  // Populate the variants dropdown
   const variants = data.Variants || [];
   const variantSelect = document.getElementById('variant-select');
   if (variantSelect) {
     variantSelect.innerHTML = '';
     variants.forEach(variant => {
       const option = document.createElement('option');
-      option.value = variant.name;
-      option.textContent = `${variant.name} (Index ${variant.index})`;
+      option.value = variant;
+      option.textContent = `${variant}`;
       variantSelect.appendChild(option);
     });
   }
@@ -756,7 +853,6 @@ window.checkIfNeeded = checkIfNeeded;
 window.predictPath = predictPath;
 window.markSold = markSold;
 window.upgradeBot = upgradeBot;
-window.deleteBot = deleteBot;
 window.generateAdvice = generateAdvice;
 window.setAdviceFilter = setAdviceFilter;
 window.selectBotForAdd = selectBotForAdd;
