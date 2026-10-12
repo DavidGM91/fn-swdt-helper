@@ -9,23 +9,26 @@ I did learn a lot of how to properly prompt an agent, their capabilities and lim
 
 # Models tested on this
 
-codestral-22b-v0.1 
-qwen3-30b-a3b-instruct-2507
-qwen2.5-coder-14b-instruct Q6_k and Q3_K_1
-gemma-4-12b All QAT Q4_0, Q6_K and Q8_0
-qwen2.5-coder-7b-instruct Q8_0 and Q4_K_M
-qwen2.5-coder-1.5b-instruct
+- codestral-22b-v0.1 
+- qwen3-30b-a3b-instruct-2507
+- qwen2.5-coder-14b-instruct Q6_k and Q3_K_1
+- gemma-4-12b All QAT Q4_0, Q6_K and Q8_0
+- qwen2.5-coder-7b-instruct Q8_0 and Q4_K_M
+- qwen2.5-coder-1.5b-instruct
 
-gemini-3.[1/5]-flash-little
-google anti-gravity
+- bge-reranker-large
+- nomic-embed-text 
 
-Strata qwen3.8-flash-next-coder-iq1_m
+- gemini-3.[1/5]-flash-little
+- google anti-gravity
+
+- Strata qwen3.8-flash-next-coder-iq1_m
 
 # Programs and plugins tested
 
-LM Studio Bionic
-Continue for VS Code
-OpenCode
-Aider
-IDE for Anti-Gravity
-Olama
+- LM Studio Bionic
+- Continue for VS Code
+- OpenCode
+- Aider
+- IDE for Anti-Gravity
+- Olama
